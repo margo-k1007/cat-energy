@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Форма</title>
+    <!-- <link href="https://fonts.googleapis.com/css?family=Oswald:200,300,400,500,600,700&amp;subset=cyrillic" rel="stylesheet">  -->
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    
+    <header id="main-header" class="main-header">
+
+        <navigation class="main-header__nav">
+            <ul class="main-header__logo">
+                <li>
+                    <a href="#" class="main-header__link">
+                        <img src="" alt="Cat Enargy" width="" height="">
+                    </a>
+                </li>
+            </ul>
+            <ul class="main-header__main-menu">
+                <li>
+                    <a href="index.html" class="main-header__link main-header__link_current">Главная</a>
+                </li>
+                <li>
+                    <a href="catalog.html" class="main-header__link main-header__link_current">Каталог продукции</a>
+                </li>
+                <li>
+                    <a class="main-header__link main-header__link_current">Подбор программы</a>
+                </li>
+            </ul>
+        </navigation><!--main-header__nav-->
+        
+    </header><!--main-header-->
+
+    <main id="form-main" class="form-main">
+
+        <section id="program-selection" class="program-selection">
+            <h1 class="program-selection__title">Подбор программы</h1>
+            <form action="#" class="program-selection__form" GET>
+
+                <fieldset class="program-selection__questionnaire questionnaire">
+                    <legend>
+                        <p class="questionnaire__caption">
+                            Заполните анкету и мы подберем 
+                            программу питания для вашего кота
+                            </p>
+                    </legend>
+
+                    <div class="questionnaire__main-information questionnaire__main-information_left">
+                        <p><label for="input-name">Имя:<sup>*</sup><input type="text" id="input-name" name="input-name" placeholder="Барсик"></label></p>
+                        <p><label for="input-weight">Вес (кг):<sup>*</sup><input type="text" id="input-weight" name="input-weight" placeholder="7"></label></p>
+                        <p><label for="input-age">Возраст (лет):<input type="text" id="input-age"  name="input-age" placeholder="7"></label></p>
+                    </div>
+
+                    <div class="questionnaire__goal questionnaire__goal_right">
+                        <p>
+                            <label for="radio-slim"><input type="radio" id="radio-slim" name="goal" checked>Похудение</label>
+                            <label for="radio-pro"><input type="radio" id="radio-pro" name="goal">Набор массы</label>
+                            <label for="radio-need-advice"><input type="radio" id="radio-need-advice" name="goal">Не знаю (Нужен ваш совет)</label>
+                        </p>
+                    </div>
+
+                </fieldset><!--questionnaire-->
+
+                <fieldset class="program-selection__contacts contacts-form">
+                    <legend>
+                        <h2 class="program-selection__caption">Контактные данные (владельца кота)</h2>
+                    </legend>
+
+                    <div class="contacts-form__email contacts-form__email-left">
+                        <label for="email-adress">e-mail:<sup>*</sup><input type="email" name="email-adress" id="email-adress" placeholder="kuklachev@gmail.com"></label>
+                    </div>
+
+                    <div class="contacts-form__tel contacts-form__telemail-right">
+                        <label for="tel">Телефон:<sup>*</sup><input type="tel" name="tel" id="tel" placeholder="8 (960) 900-60-90"></label>
+                    </div>
+
+                </fieldset><!--contacts-form-->
+
+                <fieldset class="program-selection__contacts comments-form">
+                    <legend>
+                        <h2 class="program-selection__caption">Комментарий</h2>
+                    </legend>
+
+                    <textarea name="comments-textarea" id="comments-textarea" rows="10" placeholder="Расскажите обо всех повадках кота">
+
+                    </textarea>
+
+                </fieldset><!--comments-form-->
+
+
+                <fieldset class="program-selection__contacts additionally-form">
+                    <legend>
+                        <h2 class="program-selection__caption">Дополнительно</h2>
+                    </legend>
+
+                    <label for="checkbo-suger"><input type="checkbox" id="checkbo-suger" name="checkbox-suger" checked>Сахарозаменитель</label>
+                    <label for="checkbo-water"><input type="checkbox" id="checkbo-water" name="checkbox-water">Питьевая вода</label>
+                    <label for="checkbo-milk"><input type="checkbox" id="checkbo-milk" name="checkbox-milk">Молоко</label>
+                    <label for="checkbo-vitamin"><input type="checkbox" id="checkbo-vitamin" name="checkbox-vitamin">Витамины</label>
+
+                </fieldset><!--additionally-form-->
+
+            </form><!--"program-selection__form-->
+
+        </section><!--program-selection-->
+
+    </main><!--form-main-->
+
+    <footer id="main-footer" class="main-footer">
+
+        <div class="main-footer__map">
+            <div class="main-footer__contacts"> 
+                <div class="main-footer__invite"></div>
+                <div class="main-footer__adress"></div>
+            </div>
+        </div><!--main-footer__map-->
+
+        <div class="main-footer__logo">
+            <a href="#" class="main-footer__link">
+                <img src="" alt="Cat Enargy" width="" height="">
+            </a>
+        </div><!--main-footer__logo-->
+        <div class="main-footer__socials socials">
+            <ul class="socials__list">
+                <li class="socials__item socials__vk">
+                    <a class="socials__link" href="#">Вконтакте</a>
+                </li>
+                <li class="socials__item socials__inst">
+                    <a class="socials__link" href="#">Инстаграм</a>
+                </li>
+                <li class="socials__item socials__fb">
+                    <a class="socials__link" href="#">Фейсбук</a>
+                </li>
+            </ul>
+        </div><!--socials-->
+        <div class="main-footer__link">
+            <a href="#">
+            <img src="" alt="HTML Academy" width="" height="">
+            </a>
+        </div><!--main-footer__link-->
+    </footer><!--main-footer-->
+
+
+</body>
+</html>
