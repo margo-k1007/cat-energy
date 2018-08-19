@@ -1,0 +1,14 @@
+// .foo {
+//     @include size(100px, 20px);
+
+@mixin clearfix() {
+    &::before, &::after {
+        content: "";
+        display: table;
+        clear: both;
+    }  
+}
+@mixin size($width: 50px, $height: auto) {
+    width: $width;
+    height: $height;
+}

@@ -1,0 +1,15 @@
+$breakpoints: (
+    "desktop": (max-width: 1200px),
+    "tablet": (max-width: 992px),
+    "mobile": (max-width: 320px),
+);
+//     @include respond-to('mobile') {
+//       color: blue;
+//     }
+//   }
+
+// $body-bg: ;
+// $block-bg: ;
+// $link-color: ;
+// $text-color: ;
+// $button-bg: ;
