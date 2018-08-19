@@ -1,0 +1,13 @@
+.selection {
+    padding: 90px 80px;
+    @media #{$tablet} {
+        padding: 40px 90px;
+    }
+}
+.selection__title {
+    font-size: 60px;
+    font-family: "Oswald";
+}
+.selection__slogan {
+    text-transform: uppercase;
+}

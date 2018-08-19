@@ -1,15 +1,9 @@
-$breakpoints: (
-    "desktop": (max-width: 1200px),
-    "tablet": (max-width: 992px),
-    "mobile": (max-width: 320px),
-);
-//     @include respond-to('mobile') {
-//       color: blue;
-//     }
-//   }
+$tablet: "(max-width: 768px)";
+$mobile: "(max-width: 320px)";
+
+
 
 // $body-bg: ;
-// $block-bg: ;
-// $link-color: ;
-// $text-color: ;
-// $button-bg: ;
+$icon-bg: rgb(103, 183, 55);
+$block-bg: rgb(242, 242, 242);
+$link-color: rgb(17,17,17);

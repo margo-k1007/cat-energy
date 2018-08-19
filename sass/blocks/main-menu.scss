@@ -1,0 +1,27 @@
+.main-menu {
+    text-align: right;
+}
+.main-menu__item {
+    display: inline-block;
+    vertical-align: top;
+    width: 32%;
+    min-width: 169px;
+    padding: 15px;
+    @media #{$tablet} {
+        min-width: 162px;
+    }
+}
+.main-menu__link {
+    display: inline-block;
+    height: 100%;
+    
+    color: rgb(255, 255, 255);
+    text-transform: uppercase;
+    text-decoration: none;
+    @media #{$tablet} {
+        font-size: 18px;
+    }
+}
+.main-menu__link--current {
+    border-bottom: 1px solid rgb(255, 255, 255);
+}

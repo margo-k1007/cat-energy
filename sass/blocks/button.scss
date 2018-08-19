@@ -1,0 +1,14 @@
+.button {
+    display: block;
+    @include size(246px, 52px);
+
+    font-size: 20px;
+    line-height: 52px;
+    color: rgb(255,255,255);
+    font-family: "Oswald", sans-serif;
+    text-transform: uppercase;
+    text-decoration: none;
+    text-align: center;
+
+    background-color: $icon-bg;
+}

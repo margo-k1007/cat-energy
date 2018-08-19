@@ -1,0 +1,51 @@
+.main-header {
+    @include container();
+    padding-top: 50px;
+    padding-bottom: 50px;
+    min-height: 750px;
+
+    background-color: green;
+
+    @media #{$tablet} {
+        padding-top: 20px;
+        padding-bottom: 20px;
+        min-height: 950px;
+    }
+    @media #{$mobile} {
+        padding-top: 10px;
+        padding-bottom: 10px;
+        min-height: 570px;
+    }
+}
+.main-header__nav {
+    @include clearfix();
+    width: 100%;
+    min-height: 70px;
+    padding: 0 40px;
+    @media #{$tablet} {
+        padding: 0;
+    }
+}
+.main-header__logo,
+.main-header__menu {
+    float: left;
+    width: 50%;
+    min-height: 70px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    @media #{$mobile} {
+        float: none;
+        width: 100%;
+    }
+}
+.main-header__logo {
+    @media #{$tablet} {
+        width: 27%;
+    }
+}
+.main-header__menu {
+    @media #{$tablet} {
+        width: 73%;
+    }
+}

@@ -1,0 +1,37 @@
+.main-footer__map {
+    width: 100%;
+    height: 400px;
+}
+.main-footer__contacts {
+    @include clearfix();
+    @include size(570px, 200px);
+    margin: 90px 40px;
+    background-color: rgb(255, 255, 255);
+}
+.main-footer__invite {
+    float: left;
+    width: 50%;
+    padding: 70px 60px;
+    text-transform: uppercase;
+}
+.main-footer__adress {
+    float: left;
+    width: 50%;
+    padding: 70px 60px;
+}
+
+.main-footer__logo,
+.main-footer__socials, 
+.main-footer__link {
+    float: left;
+    width: 33.3%;
+}
+.socials__list {
+    margin: 0;
+    padding: 0;
+    list-style: 0;
+}
+.socials__item {
+    display: inline-block;
+    width: 33.3%;
+}

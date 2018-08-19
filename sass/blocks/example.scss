@@ -1,0 +1,12 @@
+.example {
+    @include clearfix();
+    @include container();
+    min-height: 600px;
+}
+.example__content {
+    float: left;
+    width: 50%;
+    min-height: 455px;
+    padding: 0 40px;
+
+}

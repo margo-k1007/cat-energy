@@ -1,0 +1,18 @@
+.advantages {
+    @include clearfix();
+    @include container();
+    min-height: 105px;
+}
+.advantages__title {
+    font-size: 60px;
+}
+.advantages__item {
+    float: left;
+    width: 25%;
+    padding: 3%;
+    min-height: 226px;
+}
+.advantages__icon {
+    @include size(80px);
+    background-color: $icon-bg;
+}
