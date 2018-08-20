@@ -1,5 +1,6 @@
 .catalogs {
     @include clearfix();  
+    @include container();  
 }
 .catalog {
     float: left;
@@ -10,6 +11,17 @@
     min-height: 367px;
 
     background-color: $block-bg;
+    @media #{$tablet} {
+        float: none;
+        width: 100%;
+        max-width: 708px;
+        margin: 0;
+        margin-bottom: 30px;
+        min-height: 367px;
+    }
+    @media #{$mobile} {
+        margin-bottom: 20px;
+    }
 }
 .catalog__icon {
     display: inline-block;
@@ -20,11 +32,28 @@
     overflow: visible;
     border-radius: 50%;
     background-color: $icon-bg;
+    @media #{$tablet}  and (min-width: 321px) {
+        display: block;
+        float: right;
+        @include size(200px);
+    }
 }
 .catalog__title {
     display: inline-block;
     vertical-align: top;
     width: 65%;
+    @media #{$tablet} and (min-width: 321px) {
+        width: 55%;
+    }
+}
+.catalog__description {
+    @media #{$tablet} {
+        width: 55%;
+    }
+    @media #{$mobile} {
+        width: 100%;
+        border-bottom: 1px solid rgb(203,203,203);
+    }
 }
 .catalog__link {
     text-transform: uppercase;

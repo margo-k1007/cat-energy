@@ -11,8 +11,37 @@
     width: 25%;
     padding: 3%;
     min-height: 226px;
+    @media #{$tablet} {
+        width: 50%;
+        padding-left: 0;
+        padding-right: 12%;
+        &:nth-child(2n+1) {
+            padding-right: 0;
+            padding-left: 12%;
+        }
+    }
+    @media #{$mobile} {
+        @include clearfix();
+        float: none;
+        width: 100%;
+        padding: 0;
+        &:nth-child(2n+1) {
+            padding: 0;
+        }
+        padding-bottom: 20px;
+    }
 }
 .advantages__icon {
     @include size(80px);
     background-color: $icon-bg;
+    @media #{$mobile} {
+        float: left;
+        width: 80px;
+    }
+    .advantages__description {
+        @media #{$mobile} {
+            float: right;
+            width: 200px;
+        }
+    }
 }

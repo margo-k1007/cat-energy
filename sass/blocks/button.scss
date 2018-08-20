@@ -11,4 +11,7 @@
     text-align: center;
 
     background-color: $icon-bg;
+    @media #{$mobile} {
+        width: 100%;
+    }
 }

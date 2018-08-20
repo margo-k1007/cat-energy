@@ -8,5 +8,9 @@
     width: 50%;
     min-height: 455px;
     padding: 0 40px;
-
+    @media #{$tablet} {
+        float: none;
+        width: 100%;
+        padding: 0;
+    }
 }
