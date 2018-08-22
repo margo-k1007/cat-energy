@@ -1,9 +1,56 @@
 .main-footer {
     @include clearfix();
-    @include container();
     min-height: 150px;
     @media #{mobile} {
         min-height: 236px;
+    }
+}
+.main-footer__map {
+    width: 100%;
+    height: 400px;
+    @media #{$tablet} {
+        padding-top: 200px;
+    }
+}
+.main-footer__contacts {
+    @include clearfix();
+    @include size(570px, 200px);
+    margin: 90px 40px;
+    background-color: rgb(255, 255, 255);
+    @media #{$tablet} {
+        @include clearfix();
+        width: 100%;
+        position: relative;
+        top: -200px;
+        margin: 0;
+    }
+}
+.main-footer__invite {
+    float: left;
+    width: 50%;
+    padding: 70px 60px;
+    font-size: 20px;
+    line-height: 1.2;
+    color: rgb(17,17,17);
+    font-family: "Oswald", sans-serif;
+    text-transform: uppercase;
+    @media #{$mobile} {
+        font-size: 16px;
+        padding: 0;
+    }
+}
+.main-footer__adress {
+    float: right;
+    width: 50%;
+    padding: 70px 60px;
+    font-size: 20px;
+    line-height: 20px;
+    color: rgb(68,68,68);
+    font-family: "Arial", sans-serif;
+    @media #{$mobile} {
+        text-align: right;
+        font-size: 14px;
+        padding: 0;
     }
 }
 .main-footer__logo,

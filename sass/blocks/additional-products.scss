@@ -1,0 +1,67 @@
+.additional-products {
+    @include clearfix();
+    padding-left: 40px;
+    padding-right: 40px;
+}
+.additional-products__title {
+    font-size: 36px;
+    line-height: 1.2;
+    color: rgb(17,17,17);
+    font-family: "Oswald", sans-serif;
+}
+.additional-products__table {
+    float: left;
+    width: 898px;
+    display: table;
+    max-width: 100%;
+    border-collapse: collapse;
+    @media #{$tablet} {
+        float: none;
+        width: 100%;
+        height: 200px;
+    }
+}
+.additional-products__row {
+    display: table-row;
+    border-top: 1px solid rgb(203,203,203);
+    border-bottom: 1px solid rgb(203,203,203);
+}
+.additional-products__cell {
+    display: table-cell;
+    padding-top: 16px;
+    padding-bottom: 16px;
+    font-size: 16px;
+    line-height: 1.2px;
+    color: rgb(68,68,68);
+    font-family: "Arial", sans-serif;
+}
+.additional-products__cell:nth-child(4n+1) {
+    font-size: 20px;
+    line-height: 1.2px;
+    color: rgb(34,34,34);
+    font-family: "Oswald", sans-serif;
+    text-transform: uppercase;
+}
+.additional-products .button {
+    @include size(245px, 40px);
+    font-size: 16px;
+    line-height: 40px;
+    margin-right: 0;
+}
+.addtional-products__present {
+    float: right;
+    @include size(245px, 290px);
+    background: green;
+    @media #{$tablet} {
+        float: none;
+        width: 100%;
+        height: 200px;
+    }
+}
+.present__text {
+    padding: 45px 40px;
+    font-size: 16px;
+    color: rgb(255,255,255);
+    font-family: "Arial", sans-serif;
+    text-align: center;
+}

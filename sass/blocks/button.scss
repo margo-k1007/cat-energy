@@ -1,6 +1,7 @@
 .button {
     display: block;
-    @include size(246px, 52px);
+    @include size(245px, 52px);
+    margin: 0 auto;
 
     font-size: 20px;
     line-height: 52px;
