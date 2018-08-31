@@ -1,15 +1,11 @@
 .main-header {
-    @include container();
-    padding-top: 50px;
-    padding-bottom: 50px;
-    min-height: 160px;
-
-    background-color: green;
+    // @include container();
+    padding-top: 54px;
+    min-height: 140px;
 
     @media #{$tablet} {
         padding-top: 20px;
         padding-bottom: 20px;
-        min-height: 950px;
     }
     @media #{$mobile} {
         padding-top: 10px;
@@ -21,7 +17,6 @@
     @include clearfix();
     width: 100%;
     min-height: 70px;
-    padding: 0 40px;
     @media #{$tablet} {
         padding: 0;
     }
@@ -34,10 +29,11 @@
     width: 50%;
     min-height: 70px;
     margin: 0;
-    padding: 0;
+    padding: 0 40px;
     list-style: none;
     @media #{$tablet} {
         width: 27%;
+        padding: 0;
     }
     @media #{$mobile} {
         float: none;
@@ -61,4 +57,54 @@
         background-color: rgb(255,255,255);
     }
 }
+.main-menu {
+    text-align: right;
+    font-size: 0;
+}
+.main-menu__item {
+    display: inline-block;
+    vertical-align: top;
+    width: 33.3%;
+    min-width: 169px;
+    padding: 5px;
+    padding-top: 20px;
+    &:first-child {
+        padding-left: 0;
+    }
+    &:last-child {
+        padding-right: 0;
+    }
+    @media #{$tablet} {
+        min-width: 162px;
+    }
+    @media #{$mobile} {
+        display: block;
+        width: 100%;
+        border-top: 1px solid rgb(203,203,203);
+        text-align: center;
+    }
+}
+.main-menu__link {
+    display: inline-block;
+    height: 100%;
+    
+    font-size: 20px;
+    line-height: 25px;
+    color: rgb(255,255,255);
+    font-family: "Oswald";
+    text-transform: uppercase;
+    text-decoration: none;
+
+    @media #{$tablet} {
+        font-size: 18px;
+        color: rgb(0, 0, 0);
+    }
+    @media #{$mobile} {
+        
+    }
+}
+.main-menu__link--current {
+    border-bottom: 1px solid rgb(255, 255, 255);
+}
+
 

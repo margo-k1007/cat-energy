@@ -1,11 +1,71 @@
-.subtitle__item {
+
+.subtitle {
     @include clearfix();
+    // @include container();
+    min-height: 560px;
+    margin-bottom: 75px;
+}
+.subtitle__item {
     float: left;
     width: 50%;
+    min-height: 556px;
     padding: 0 40px;
+    position: relative;
     @media #{$tablet} {
         float: none;
         width: 100%;
         padding: 0;
     }
+}
+.subtitle__image {
+    position: absolute;
+    bottom: 0;
+    left: 40px;
+    width: 680px;
+    height: 695px;
+    background: $icon-bg url("../img/index-background-desktop.jpg") no-repeat 50% 50%;
+    z-index: -10;
+}
+.subtitle__image img {
+    position: absolute;
+    top: 140px;
+    right: 327px;
+}
+.selection {
+    padding: 90px 78px;
+    padding-top: 40px;
+    @media #{$tablet} {
+        padding: 40px 90px;
+    }
+    @media #{$mobile} {
+        padding: 40px 0;
+    }
+}
+.selection__title {
+    margin-bottom: 42px;
+    font-size: 60px;
+    font-weight: 400;
+    line-height: 1;
+    @media #{$mobile} {
+        text-align: center;
+        font-size: 36px;
+        color: rgb(255, 255, 255);
+    }
+}
+.selection__slogan {
+    margin-bottom: 50px;
+    text-transform: uppercase;
+    font-size: 20px;
+    line-height: 1.2;
+    font-weight: 400;
+    color: rgb(17,17,17);
+    font-family: "Oswald";
+    @media #{$mobile} {
+        text-align: center;
+        font-size: 14px;
+        color: rgb(255, 255, 255);
+    }
+}
+.selection__button {
+    margin-left: 0;
 }

@@ -1,21 +1,53 @@
 .main-footer {
     @include clearfix();
-    min-height: 150px;
-    @media #{mobile} {
+    background-color: $block-bg;
+
+    margin-left:  -70px;
+    margin-right: -70px;
+    padding-left: 70px;
+    padding-right: 70px;
+
+    @media #{$tablet} {
+        margin-left:  -30px;
+        margin-right: -30px;
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+    @media #{$mobile} {
+        margin-left:  -20px;
+        margin-right: -20px;
+        padding-left: 20px;
+        padding-right: 20px;
+
         min-height: 236px;
     }
 }
 .main-footer__map {
-    width: 100%;
     height: 400px;
+    background: $block-bg url("../img/map-pin.png") no-repeat 50% 50%;
+    padding: 95px;
+    margin-left:  -70px;
+    margin-right: -70px;
+    padding-left: 110px;
+    padding-right: 110px;
+
     @media #{$tablet} {
+        margin-left:  -30px;
+        margin-right: -30px;
+        padding-left: 30px;
+        padding-right: 30px;
         padding-top: 200px;
+    }
+    @media #{$mobile} {
+        margin-left:  -20px;
+        margin-right: -20px;
+        padding-left: 20px;
+        padding-right: 20px;
     }
 }
 .main-footer__contacts {
     @include clearfix();
     @include size(570px, 200px);
-    margin: 90px 40px;
     background-color: rgb(255, 255, 255);
     @media #{$tablet} {
         @include clearfix();
@@ -28,7 +60,7 @@
 .main-footer__invite {
     float: left;
     width: 50%;
-    padding: 70px 60px;
+    padding: 66px 76px;
     font-size: 20px;
     line-height: 1.2;
     color: rgb(17,17,17);
@@ -39,12 +71,18 @@
         padding: 0;
     }
 }
+.main-footer__row {
+    @include container();
+    min-height: 150px;
+    padding-top: 55px;
+    padding-bottom: 60px;
+}
 .main-footer__adress {
     float: right;
     width: 50%;
-    padding: 70px 60px;
-    font-size: 20px;
-    line-height: 20px;
+    padding: 66px 44px;
+    font-size: 16px;
+    line-height: 1.2;
     color: rgb(68,68,68);
     font-family: "Arial", sans-serif;
     @media #{$mobile} {
@@ -67,8 +105,46 @@
     margin: 0;
     padding: 0;
     list-style: 0;
+    font-size: 0;
+    text-align: center;
 }
 .socials__item {
     display: inline-block;
-    width: 33.2%;
+    vertical-align: middle;
+    @include size(40px);
+}
+.socials__link {
+    display: inline-block;
+    vertical-align: middle;
+    @include size(100%);
+    &--vk {
+        background: url("../img/icon-vk.svg") no-repeat 50% 50%;
+        &:hover {
+            background-image: url("../img/icon-vk.svg");
+        }
+    }
+    &--inst {
+        background: url("../img/icon-inst.svg") no-repeat 50% 50%;
+        &:hover {
+            background-image: url("../img/icon-inst.svg");
+        }
+    }
+    &--fb {
+        background: url("../img/icon-fb.svg") no-repeat 50% 50%;
+        &:hover {
+            background-image: url("../img/icon-fb.svg");
+        }
+    }
+}
+.main-footer__link {
+    font-size: 16px;
+    line-height: 1.2;
+    color: rgb(68,68,68);
+    font-family: "Arial";
+    text-align: right;
+    text-decoration: none;
+}
+.main-footer__link svg {
+    position: relative;
+    top: 15px;
 }
