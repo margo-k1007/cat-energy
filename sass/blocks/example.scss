@@ -14,12 +14,15 @@
         margin-right: -30px;
         padding-left: 30px;
         padding-right: 30px;
+        padding-bottom: 0;
+        background: #ffffff;
     }
     @media #{$mobile} {
         margin-left:  -20px;
         margin-right: -20px;
         padding-left: 20px;
         padding-right: 20px;
+        background: $block-bg;
     }
 }
 .example__title {
@@ -35,6 +38,14 @@
     color: rgb(17,17,17);
     font-family: "Oswald";
     font-weight: 400;
+    @media #{$tablet} {
+        padding: 0 70px;
+    }
+    @media #{$mobile} {
+        padding: 0 70px;
+        font-size: 36px;
+        line-height: 60px;
+    }
 }
 .example__content {
     position: relative;
@@ -42,11 +53,13 @@
     width: 50%;
     min-height: 390px;
     padding: 0 40px;
-    
     @media #{$tablet} {
         float: none;
         width: 100%;
         padding: 0;
+    }
+    @media #{$mobile} {
+        min-height: 350px;
     }
 }
 .example__text {
@@ -57,6 +70,17 @@
     line-height: 1.4;
     color: rgb(68,68,68);
     font-family: "Arial";
+    @media #{$tablet} {
+        padding: 0;
+        margin-top: 55px;
+        margin-bottom: 60px;
+    }
+    @media #{$mobile} {
+        margin-top: 25px;
+        margin-bottom: 25px;
+        font-size: 14px;
+        line-height: 18px;
+    }
 }
 .example__num {
     margin-top: 15px;
@@ -66,6 +90,11 @@
     font-family: "Oswald";
     text-align: center;
     text-transform: uppercase;
+    @media #{$mobile} {
+        margin-bottom: 0;
+        font-size: 24px;
+        line-height: 24px;
+    }
 }
 .example__label {
     display: block;
@@ -78,6 +107,15 @@
     font-family: "Arial";
     text-align: center;
     background: $block-bg;
+    @media #{$tablet} {
+        background: #ffffff;
+    }
+    @media #{$mobile} {
+        width: 80px;
+        font-size: 12px;
+        line-height: 12px;
+        background: $block-bg;
+    }
 }
 .example__time,
 .example__weight {
@@ -88,11 +126,19 @@
     border-radius: 3px;
     border: 1px solid #cdcdcd;
     text-align: center;
+    @media #{$mobile} {
+        @include size(125px, 58px);
+        margin-right: 12px;
+    }
 }
 .example__time {
     margin-right: 100px;
+    @media #{$mobile} {
+        margin-right: 0;
+    }
 }
 .example__costs {
+    @include clearfix();
     position: absolute;
     bottom: 0;
     width: 100%;
@@ -101,7 +147,121 @@
     color: rgb(17,17,17);
     font-family: "Oswald";
     text-transform: uppercase;
+    @media #{$tablet} {
+        position: static;
+    }
+    @media #{$mobile} {
+        font-size: 14px;
+        line-height: 20px;
+        text-align: center;
+        padding-top: 80px;
+    }
+}
+.example__cost {
+    @media #{$tablet} {
+        float: right;
+        width: 175px;
+    }
+    @media #{$mobile} {
+        float: none;
+    }
 }
 .example__amount {
     text-align: right;
+    @media #{$tablet} {
+        float: right;
+        width: 175px;
+    }
+    @media #{$mobile} {
+        float: none;
+    }
 }
+.example__content--right {
+    position: relative;
+    @media #{$tablet} {
+        min-height: 500px;
+        background: $block-bg;
+        padding: 70px 65px;
+    }
+}
+.example__image {
+    position: absolute;
+    @include size(610px, 500px);
+    bottom: 50px;
+    left: 0;
+    overflow: hidden;
+    background-color: $block-bg;
+    @media #{$tablet} {
+        bottom: 100px;
+        @include size(610px, 500px);
+    }
+    @media #{$mobile} {
+        @include size(280px, 260px);
+    }
+    img {
+        object-fit: contain;
+    }
+}
+.example__image--left {
+    // width: 370px;
+    z-index: 3;
+}
+.example__image--right {
+    z-index: 2;
+}
+.example__toggle {
+    position: absolute;
+    bottom: -15px;
+    @include size(570px, 50px);
+    @media #{$tablet} {
+        bottom: 20px;
+    }
+}
+.toggle__scale {
+    display: inline-block;
+    vertical-align: middle;
+    @include size(428px, 6px);
+    margin: 0 10px;
+    background-color: rgb(220,220,220);
+    border-radius: 3px;
+    @media #{$mobile} {
+        position: relative;
+        @include size(90px, 16px);
+        padding: 3px;
+        background-color: #ffffff;
+    }
+}
+.toggle__control {
+    position: absolute;
+    top: 0;
+    left: 150px;
+    @include size(7px);
+    box-sizing: content-box;
+    border: 14px solid #ffffff; 
+    border-radius: 50%;
+    background-color: $icon-bg;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+    @media #{$mobile} {
+        border: none;
+        @include size(50px, 8px);
+        border-radius: 10px;
+        top: 4px;
+        left: 0;
+
+    }
+}
+.toggle__label {
+    display: inline-block;
+    vertical-align: baseline;
+    font-family: Oswald;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 20px;
+    text-transform: uppercase;
+    border-bottom: 1px dotted #000000;
+    @media #{$mobile} {
+        font-size: 16px;
+        border-bottom: none;
+    }
+}
+

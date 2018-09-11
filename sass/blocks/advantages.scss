@@ -2,7 +2,10 @@
     @include clearfix();
     // @include container();
     min-height: 105px;
-    margin-bottom: 35px
+    margin-bottom: 35px;
+    @media #{$tablet} {
+        margin-bottom: 100px;
+    }
 }
 .advantages__title {
     padding: 0 40px;
@@ -12,6 +15,15 @@
     color: rgb(17,17,17);
     font-family: "Oswald";
     font-weight: 400;
+    @media #{$tablet} {
+        padding: 0;
+        margin-top: 12px;
+    }
+    @media #{$tablet} {
+        font-size: 36px;
+        line-height: 60px;
+    }
+
 }
 .advantages__item {
     float: left;
@@ -21,56 +33,65 @@
     @media #{$tablet} {
         width: 50%;
         padding-left: 0;
-        padding-right: 12%;
+        padding-right: 40px;
+        margin-bottom: 90px;
         &:nth-child(2n+1) {
             padding-right: 0;
-            padding-left: 12%;
+            padding-left: 40px;
+            @media #{$mobile} {
+                padding-left: 0;
+            }
+        }
+        &:nth-last-child(-n+2) {
+            margin-bottom: 0;
         }
     }
     @media #{$mobile} {
         @include clearfix();
         float: none;
         width: 100%;
+        min-height: auto;
         padding: 0;
-        &:nth-child(2n+1) {
-            padding: 0;
-        }
         padding-bottom: 20px;
+        margin: 0;
     }
 }
 .advantages__icon {
     @include size(80px);
-    background: url("../img/advantage-1.svg") no-repeat 50% 50%;
+    background: url("../img/advantage-1.png") no-repeat 50% 50%;
     background-color: $icon-bg;
 
-    &:nth-child(2) {
-        background-image: url("../img/advantage-2.svg");
+    &--number-two {
+        background-image: url("../img/advantage-2.png");
     }
 
-    &:nth-child(3) {
-        background-image: url("../img/advantage-3.svg");
+    &--number-three {
+        background-image: url("../img/advantage-3.png");
     }
 
-    &:nth-child(4) {
-        background-image: url("../img/advantage-4.svg");
+    &--number-four {
+        background-image: url("../img/advantage-4.png");
     }
 
     @media #{$mobile} {
         float: left;
-        width: 80px;
+        @include size(60px);
     }
 }
 .advantages__description {
     padding-top: 35px;
+
+    font-size: 16px;
+    color: #444444;
+    font-family: "Arial", sans-serif;
+    line-height: 1.5;
     @media #{$mobile} {
         float: right;
-        width: 200px;
-        margin-top: 35px;
-
-        font-size: 16px;
-        line-height: 1.4;
-        color: rgb(68,68,68);
-        font-family: "Arial";
+        width: 194px;
+        margin: 0;
+        padding: 0;
+        font-size: 14px;
+        line-height: 18px;
     }
 }
 
