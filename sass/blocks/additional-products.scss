@@ -3,6 +3,9 @@
     padding-left: 40px;
     padding-right: 40px;
     margin-bottom: 85px;
+    @media #{$tablet} {
+        margin-bottom: 65px;
+    }
 }
 .additional-products__title {
     margin-bottom: 80px;
@@ -20,24 +23,37 @@
     border-collapse: collapse;
     @media #{$tablet} {
         float: none;
+        display: block;
         width: 100%;
-        height: 200px;
+        margin-bottom: 70px;
+        border-bottom: 1px solid rgb(203,203,203);
     }
 }
 .additional-products__row {
     display: table-row;
-    height: 73px;
+    height: 72px;
     border-top: 1px solid rgb(203,203,203);
     border-bottom: 1px solid rgb(203,203,203);
+    @media #{$tablet} {
+        display: table;
+        @include size(100%, 139px);
+        border-collapse: collapse;
+        border-bottom: none;
+    }
 }
 .additional-products__cell {
     display: table-cell;
-    padding-top: 16px;
-    padding-bottom: 16px;
+    padding-top: 15px;
+    padding-bottom: 15px;
     font-size: 16px;
     line-height: 1.2px;
     color: rgb(68,68,68);
     font-family: "Arial", sans-serif;
+    @media #{$tablet} {
+        text-align: right;
+        height: 67px;
+        padding-top: 35px;
+    }
 }
 .additional-products__cell:nth-child(4n+1) {
     font-size: 20px;
@@ -45,29 +61,48 @@
     color: rgb(34,34,34);
     font-family: "Oswald", sans-serif;
     text-transform: uppercase;
+    @media #{$tablet} {
+        text-align: left;
+    }
 }
-.additional-products__cell:nth-child(n+4) {
+.additional-products__cell:nth-child(4n) {
     width: 245px;
+    @media #{$tablet} {
+        display: table-row;
+        width: 100%;
+    }
 }
-.additional-products .button {
+.additional-products__button {
     @include size(245px, 40px);
     font-size: 16px;
     line-height: 40px;
     margin-right: 0;
+    @media #{$tablet} {
+        width: 630px;
+        margin: 0;
+        position: absolute;
+    }
 }
 .addtional-products__present {
     float: right;
     @include size(245px, 290px);
     background: rgb(0, 128, 0) url("../img/catalog-photo-desktop.jpg") 50% 50% no-repeat;
     @media #{$tablet} {
+        @include clearfix();
         float: none;
-        width: 100%;
-        height: 200px;
+        @include size(700px, 200px);
+        background-image: url("../img/catalog-photo-tablet.jpg");
+        margin-left: -40px;
+        margin-right: -40px;
     }
 }
 .present__icon {
     @include size(245px, 120px);
     padding: 65px 90px 25px;
+    @media #{$tablet} {
+        float: left;
+
+    }
 }
 .present__text {
     padding: 35px 40px;
@@ -75,4 +110,10 @@
     color: rgb(255,255,255);
     font-family: "Arial", sans-serif;
     text-align: center;
+    @media #{$tablet} {
+        float: right;
+        width: 300px;
+        padding: 60px 0;
+        padding-right: 120px;
+    }
 }

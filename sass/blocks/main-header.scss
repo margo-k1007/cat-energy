@@ -51,6 +51,10 @@
     @include size(250px, 58px);
     background: url("../img/logo-desktop.svg") 50% 50% no-repeat;
     background-size: contain;
+    @media #{$tablet} {
+        background-image: url("../img/logo-tablet.svg");
+        @include size(173px, 58px);
+    }
     @media #{$mobile} {
         background-image: url("../img/logo-mobile-header.svg");
         background-size: 209px 38px;
@@ -91,6 +95,7 @@
     }
     @media #{$tablet} {
         min-width: 162px;
+        padding: 5px;
     }
     @media #{$mobile} {
         display: block;
