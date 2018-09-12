@@ -2,10 +2,13 @@
     @include clearfix();
     padding-left: 40px;
     padding-right: 40px;
+    margin-bottom: 85px;
 }
 .additional-products__title {
+    margin-bottom: 80px;
     font-size: 36px;
     line-height: 1.2;
+    font-weight: 400;
     color: rgb(17,17,17);
     font-family: "Oswald", sans-serif;
 }
@@ -23,6 +26,7 @@
 }
 .additional-products__row {
     display: table-row;
+    height: 73px;
     border-top: 1px solid rgb(203,203,203);
     border-bottom: 1px solid rgb(203,203,203);
 }
@@ -42,6 +46,9 @@
     font-family: "Oswald", sans-serif;
     text-transform: uppercase;
 }
+.additional-products__cell:nth-child(n+4) {
+    width: 245px;
+}
 .additional-products .button {
     @include size(245px, 40px);
     font-size: 16px;
@@ -51,15 +58,19 @@
 .addtional-products__present {
     float: right;
     @include size(245px, 290px);
-    background: green;
+    background: rgb(0, 128, 0) url("../img/catalog-photo-desktop.jpg") 50% 50% no-repeat;
     @media #{$tablet} {
         float: none;
         width: 100%;
         height: 200px;
     }
 }
+.present__icon {
+    @include size(245px, 120px);
+    padding: 65px 90px 25px;
+}
 .present__text {
-    padding: 45px 40px;
+    padding: 35px 40px;
     font-size: 16px;
     color: rgb(255,255,255);
     font-family: "Arial", sans-serif;
