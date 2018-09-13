@@ -12,27 +12,28 @@
     
     <header id="main-header" class="main-header">
 
-        <navigation class="main-header__nav">
+        <navigation class="main-header__nav main-navigation">
             <ul class="main-header__logo">
-                <li>
+                <li class="main-header__item">
                     <a href="#" class="main-header__link">
-                        <img src="" alt="Cat Enargy" width="" height="">
+                        <span class="main-header__logo-icon"></span>
+                        <span class="main-header__logo-text"></span>
                     </a>
                 </li>
             </ul>
             <ul class="main-header__menu main-menu">
-                    <li class="main-menu__item">
-                        <a href="index.html" class="main-menu__link">Главная</a>
-                    </li>
-                    <li class="main-menu__item">
-                        <a href="catalog.html" class="main-menu__link">Каталог продукции</a>
-                    </li>
-                    <li class="main-menu__item">
-                        <a class="main-menu__link main-menu__link--current">Подбор программы</a>
-                    </li>
-                </ul>
-        </navigation><!--main-header__nav-->
-        
+                <li class="main-menu__item">
+                    <a href="index.html" class="main-menu__link">Главная</a>
+                </li>
+                <li class="main-menu__item">
+                    <a href="catalog.html" class="main-menu__link">Каталог продукции</a>
+                </li>
+                <li class="main-menu__item">
+                    <a class="main-menu__link main-menu__link--current">Подбор программы</a>
+                </li>
+            </ul>
+        </navigation><!--main-header__nav-->  
+ 
     </header><!--main-header-->
 
     <main id="form-main" class="form-main">
@@ -115,33 +116,47 @@
         <div class="main-footer__map">
             <div class="main-footer__contacts"> 
                 <div class="main-footer__invite">Приглашаем  к сотрудничеству  дилеров!</div>
-                <div class="main-footer__adress">ул. Большая Конюшенная, д. 19/8<br>Санкт-Петербург</div>
+                <div class="main-footer__adress">ул. Большая Конюшенная, д. 19/8<br>
+                    <p></p>
+                    Санкт-Петербург</div>
             </div>
         </div><!--main-footer__map-->
 
-        <div class="main-footer__logo">
-            <a href="#" class="main-footer__link">
-                <img src="" alt="Cat Enargy" width="" height="">
-            </a>
-        </div><!--main-footer__logo-->
-        <div class="main-footer__socials socials">
-            <ul class="socials__list">
-                <li class="socials__item socials__vk">
-                    <a class="socials__link" href="#">Вконтакте</a>
-                </li>
-                <li class="socials__item socials__inst">
-                    <a class="socials__link" href="#">Инстаграм</a>
-                </li>
-                <li class="socials__item socials__fb">
-                    <a class="socials__link" href="#">Фейсбук</a>
-                </li>
-            </ul>
-        </div><!--socials-->
-        <div class="main-footer__link">
-            <a href="#">
-            <img src="" alt="HTML Academy" width="" height="">
-            </a>
-        </div><!--main-footer__link-->
+        <div class="main-footer__row">
+            
+            <div class="main-footer__logo">
+                <a href="#" class="main-footer__link">
+                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="128" height="24" viewBox="0 0 128 24">
+                        <image id="footer-logo.svg" width="128" height="24" xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAAIAAAAAYCAMAAAAF1QXXAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAACfFBMVEUAAAAREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREAAAAv9+PPAAAA0nRSTlMAFH/I8vzmr1ABk8AahDyQMCNgGLR4pn47QJjE0MWgVAKKFZc06QTtSrCNgCDwyyifCZutBtt8HXno7grcw+ScuPoMdrnRSMddWvSnyuwHTGQvbwhyS/7zCwUZ+Q+sawPUONYhhzdEZ7OUX6vgPVdlu6VsTbeWYvckcNoxqHujffEO+xJb2HVoOf2PwYGxU2Zp4b3nVc0Wv0brXlmMnSW1H2pHibbdRSaeoqSS0hxucRcp3s+GbeMT+EOZ0y1BEKH2Mis+ur4szswqspqCWHoeT05/DP9mAAAAAWJLR0QAiAUdSAAAAAlwSFlzAAALEgAACxIB0t1+/AAABF1JREFUSMeNlotfVFUQx4eQV3driVBDl9uqkOKumkmWgASoPNbasHJTjDKMzDIJCw01H4QoUZZhEkXaw8oSs8jMsrKXPexlv7+omXPu3Uf37n7ufD575syc13fvmTPnEFHWVdmTkJObl19AWq42RHxcu8ZIyLVWK/ltTyEVGsZ1yldkGNcTFVsNxUSTlZ4y9QZ7VMm06YFS88YgV2eYph410zRnEZWVw5K8m3Tf2cqaw7UKJCTfnsqwPSVUAsxVvhAQJppnNcwjMu1O8xdIe/BmyzQWEt0CTNbYwCKqvDWxxmLlvk0bt2cAWBIQKROAquoUgBppWKoAav131NUDuQ3cvownqFm+gssZRI1Ak5opD2imFpk8svJOUXdFxX23XnBlBoCQ/V3Z35oCUGK1MIDBahW77iG6twq4j83VMdy/htZWIdbGVjSCdQ9Qu0z+ID20XvTDMnaxXrCDqxsKC1ulXhsOh6vTAKzIBECPABwRnUC5irBs4FEi3o+NbMwBHiOqkQXKiDaJflw6PaEBcqLxNbCZkuR/AHgyE8AWYD1RF/CUcncDW4meBp5howfYRrRd5niWA150r3TaYX3znR4BdmUCyFeDnwN2Kzf/zT387fdi3T4qqEXf80RqrbCaQgM0xLgS4F+RR4A+XwaAfmA/HzzAVO6BQOAAq93AFtoJ1FEC4ICEbz87DrI96OfiBU8AQ8CLGQCmAS9x6rABLDkkMc5jXk4CiMsrbB+W4lVPAP5sDFemAyg4Ui8R7gBYGMHeytcweNQNYBbbI69zMZoeIGCyZGmAN4A3EwB13DCmASKBoWEeu6PaCUC7OP6sv+gAaGL7rWPibUsLYA8SgOgoSlMz4WZKyoTH3yYXAD4co8A7bgDBiKTEykEu300LoDKhTwPQe3xgUjLhCQ3wvt/P+ecDigOoqTRJgxy+mM8N4EOxW+gwl8s8xQBtiOGkWwxUEH0EjLkC0CKuLSU3gCNid9IIlx97A6BibD/lDtAMjCcATvf2TrEB+HjikxQAOw+ohHSmqMlOsh4AVgOz3QE+5bG+5Bgosiv7eA8+cwUoTlw/fWu9AQQnrDkcAPS5Tu9zHQDSV393iTkcIzor+guic0kX4CpvADSQFoBTYDerqUC7cvc6AcZl8EF1MwD99KWoc4YxX3SzR4Cs8+kAvuLjFiTiXDGk3JucAF/LAmep4ILob+hbaye+Ez3mEYAupgOIfg/8QPQjv5JkP6nDCfCT+tilHVJOBOmMaDm7S1gv9wrQmQ6ATuinFV/6A6w2wglAPyf2vMvKYKfZfYn1cDqA/RUiv8QB6FcbYLo0dCcAeNNHdPCh4/g4zv/mBGi7YK9/kR8tcg9PEvcp8RzNlIr1o1QDbHN5lCqA34H6NXwrWal5a48TgKJdl3MHc3LbG8X4gy+TP6XSKPcNP1QWmNb1EpekZzk3tihf9Um5m5Ke5fmh0F+q5e9Q6B/RVy5PlF+6Qv+arXqWHnWbEf0Hq2TCskQLdeIAAAAASUVORK5CYII="/>
+                    </svg>
+                </a>
+            </div><!--main-footer__logo-->
+            
+            <div class="main-footer__socials socials">
+                <ul class="socials__list">
+                    <li class="socials__item">
+                        <a class="socials__link socials__link--vk" href="#">Вконтакте</a>
+                    </li>
+                    <li class="socials__item">
+                        <a class="socials__link socials__link--inst" href="#">Инстаграм</a>
+                    </li>
+                    <li class="socials__item">
+                        <a class="socials__link socials__link--fb" href="#">Фейсбук</a>
+                    </li>
+                </ul>
+            </div><!--socials-->
+            
+            <div class="main-footer__developed">
+                <a class="main-footer__link" href="#">
+                    <span>HTML Academy</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="27" height="34" viewBox="0 0 27 34">
+                        <image id="htmlacademy.svg" width="27" height="34" xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAABsAAAAiCAMAAACZf1ICAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAANlBMVEUAAABmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmYAAAAotzoVAAAAEHRSTlMAEEBwgJ+/3++PYCBQMM+vN5sNjQAAAAFiS0dEAIgFHUgAAAAJcEhZcwAACxIAAAsSAdLdfvwAAAEySURBVCjPdZPrtoQgCIUVEdEa5f2f9iBeapoOP7LVB7i55JxzHiBgJJJuRBEDgNfvjpK8WyJnJxNlLAAOoGAmYvuqDA73awcYc+/2YCWd/7BPF0rHC/NRBI+sD/9kgUeIBnP5YlBlX3Umoc9mls5fKpAl+sGQt4J1ROFg7ErnKE6qlxijKx0K43ytI86uHiyQJOhxacSpkjxDSWJI0qBp/NCpyWdNp4pArX/r7I3kkZgo2ITpVnsL2XzVp/4woaLNCj6Pmd8ZaP058N6HO6Naugp8YydLK1Xq3CtTvWekFzGupKNaY35NPZ3p6pI3lsrcFl7pbHWUqcLtmlfz+ur0rh9NroYuH5E2ptWbvnLN3DaMvQVSYU91D3FtgTXU2/n8Ccw/XvHfZqVzeP87NGG86/0DpCUXERAe2h8AAAAASUVORK5CYII="/>
+                    </svg>
+                </a>
+            </div><!--main-footer__link-->
+
+        </div><!--main-footer__row-->
+        
     </footer><!--main-footer-->
 
 

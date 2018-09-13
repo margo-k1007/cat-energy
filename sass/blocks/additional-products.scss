@@ -6,14 +6,41 @@
     @media #{$tablet} {
         margin-bottom: 65px;
     }
+    @media #{$mobile} {
+        margin-bottom: 35px;
+        padding: 0;
+    }
 }
 .additional-products__title {
+    position: relative;
     margin-bottom: 80px;
     font-size: 36px;
     line-height: 1.2;
     font-weight: 400;
     color: rgb(17,17,17);
     font-family: "Oswald", sans-serif;
+    @media #{$mobile} {
+        font-size: 24px;
+    }
+    &::after {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: -30px;
+        margin-top: 2px;
+        @include size(100%, 4px);
+        background-color: $icon-bg;
+        z-index: -2;
+        @media #{$mobile} {
+            width: 20px;
+            left: auto;
+            
+        }
+    }
+    span {
+        padding: 0 20px;
+        background-color: rgb(255,255,255);
+    }
 }
 .additional-products__table {
     float: left;
@@ -28,6 +55,9 @@
         margin-bottom: 70px;
         border-bottom: 1px solid rgb(203,203,203);
     }
+    @media #{$mobile} {
+        margin-bottom: 35px;
+    }
 }
 .additional-products__row {
     display: table-row;
@@ -39,6 +69,10 @@
         @include size(100%, 139px);
         border-collapse: collapse;
         border-bottom: none;
+    }
+    @media #{$mobile} {
+        display: block;
+        height: 128px;
     }
 }
 .additional-products__cell {
@@ -54,22 +88,50 @@
         height: 67px;
         padding-top: 35px;
     }
-}
-.additional-products__cell:nth-child(4n+1) {
-    font-size: 20px;
-    line-height: 1.2px;
-    color: rgb(34,34,34);
-    font-family: "Oswald", sans-serif;
-    text-transform: uppercase;
-    @media #{$tablet} {
-        text-align: left;
+    @media #{$mobile} {
+        height: 20px;
+        padding: 15px 0;
+        font-size: 14px;
     }
-}
-.additional-products__cell:nth-child(4n) {
-    width: 245px;
-    @media #{$tablet} {
-        display: table-row;
-        width: 100%;
+    &:nth-child(4n+1) {
+        font-size: 20px;
+        line-height: 1.2px;
+        color: rgb(34,34,34);
+        font-family: "Oswald", sans-serif;
+        text-transform: uppercase;
+        @media #{$tablet} {
+            text-align: left;
+        }
+        @media #{$mobile} {
+            display: block;
+            width: 100%;
+            font-size: 16px;
+        }
+    }
+    &:nth-child(4n+2) {
+        @media #{$mobile} {
+            display: inline-block;
+            width: 49%;
+            text-align: left;
+        }
+    }
+    &:nth-child(4n+3) {
+        @media #{$mobile} {
+            display: inline-block;
+            width: 49%;
+        }
+    }
+    &:nth-child(4n) {
+        width: 245px;
+        @media #{$tablet} {
+            display: table-row;
+            width: 100%;
+        }
+        @media #{$mobile} {
+            display: block;
+            width: 100%;
+            padding-top: 5px;
+        }
     }
 }
 .additional-products__button {
@@ -82,12 +144,17 @@
         margin: 0;
         position: absolute;
     }
+    @media #{$mobile} {
+        position: static;
+        width: 280px;
+        margin: 0 auto;
+    }
 }
 .addtional-products__present {
     float: right;
     @include size(245px, 290px);
-    background: rgb(0, 128, 0) url("../img/catalog-photo-desktop.jpg") 50% 50% no-repeat;
-    @media #{$tablet} {
+    background: $icon-bg url("../img/catalog-photo-desktop.jpg") 50% 50% no-repeat;
+    @media #{$tablet} and (min-width: 321px) {
         @include clearfix();
         float: none;
         @include size(700px, 200px);
@@ -95,13 +162,28 @@
         margin-left: -40px;
         margin-right: -40px;
     }
+    @media #{$mobile} {
+        float: none;
+        width: 280px;
+        background-size: cover;
+    }
 }
 .present__icon {
-    @include size(245px, 120px);
-    padding: 65px 90px 25px;
-    @media #{$tablet} {
+    position: relative;
+    @include size(100%, 120px);
+    @media #{$tablet}  and (min-width: 321px) {
         float: left;
-
+        @include size(50%, 200px);
+    }
+    @media #{$mobile} {
+        height: 180px;
+    }
+    svg {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        margin-left: -27px;
+        margin-top: -27px;
     }
 }
 .present__text {
@@ -110,10 +192,13 @@
     color: rgb(255,255,255);
     font-family: "Arial", sans-serif;
     text-align: center;
-    @media #{$tablet} {
+    @media #{$tablet} and (min-width: 321px) {
         float: right;
         width: 300px;
-        padding: 60px 0;
-        padding-right: 120px;
+        padding: 60px;
+    }
+    @media #{$mobile} {
+        padding: 0 45px;
+        margin-top: 5px;
     }
 }
