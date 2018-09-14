@@ -1,0 +1,34 @@
+.additionally-form {
+    font-size: 0;
+    margin-bottom: 50px;
+    legend {
+        margin-bottom: 25px;
+    }
+    p {
+        display: inline-block;
+        width: 25%;
+        padding-left: 20px;
+    }
+    label {
+        position: relative;
+        padding-left: 60px;
+        &::before {
+            content: "";
+            position: absolute;
+            top: -5px;
+            left: 0;
+            @include size(40px);
+            border: 1px solid $block-bg;
+        }
+    }
+    input {
+        opacity: 0;
+        &:checked+label::after {
+            content: "";
+            position: absolute;
+            left: 10px;
+            @include size(24px);
+            background: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'%3e%3cpath d='M0 0h24v24H0z' fill='none'/%3e%3cpath d='M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z' fill='rgb(104, 183, 56)'/%3e%3c/svg%3e") 50% 50% no-repeat;
+        }
+    }
+}

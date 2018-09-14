@@ -6,5 +6,5 @@
 	<style>
 		tspan { white-space:pre }
 	</style>
-	<use id="mail.svg copy" style="filter: url(#flt1)" href="#img1" transform="matrix(1,0,0,1,0,0)"/>
+	<use id="mail.svg copy" style="filter: url(#flt1) fill: rgb(255, 0, 0)" href="#img1" transform="matrix(1,0,0,1,0,0)"/>
 </svg>

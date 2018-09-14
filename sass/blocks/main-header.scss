@@ -1,5 +1,4 @@
 .main-header {
-    // @include container();
     padding-top: 54px;
     min-height: 140px;
 
@@ -49,14 +48,14 @@
     display: inline-block;
     vertical-align: top;
     @include size(250px, 58px);
-    background: url("../img/logo-desktop.svg") 50% 50% no-repeat;
+    background: url("../img/logo-desktop.png") 50% 50% no-repeat;
     background-size: contain;
     @media #{$tablet} {
-        background-image: url("../img/logo-tablet.svg");
+        background-image: url("../img/logo-tablet.png");
         @include size(173px, 58px);
     }
     @media #{$mobile} {
-        background-image: url("../img/logo-mobile-header.svg");
+        background-image: url("../img/logo-mobile-header.png");
         background-size: 209px 38px;
     }
 }
@@ -129,7 +128,8 @@ body.home-page .main-menu__link {
     };
 }
 .main-menu__link--current {
-    border-bottom: 1px solid $icon-bg;
+    border-bottom: 2px solid $icon-bg;
+    padding-bottom: 5px;
     @media #{$mobile} {
         border-bottom: 4px solid $icon-bg;
         border-bottom: none;
@@ -137,7 +137,7 @@ body.home-page .main-menu__link {
 }
 body.home-page .main-menu__link--current {
     @media (min-width: 769px) {
-        border-bottom: 1px solid rgb(255, 255, 255);
+        border-bottom-color: 2px solid rgb(255, 255, 255);
     }
 }
 

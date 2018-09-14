@@ -1,0 +1,81 @@
+.questionnaire {
+    min-height: 340px;
+    margin-bottom: 20px;
+    padding: 0 40px;
+    border: none;
+}
+.questionnaire__caption {
+    width: 325px;
+    font-family: Oswald;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 30px;
+    text-transform: uppercase;
+}
+.questionnaire__main-information,
+.questionnaire__goals {
+    float: left;
+    width: 50%;
+}
+.questionnaire__main-information {
+    padding-top: 30px;
+    input {
+        height: 55px;
+        margin-left: 15px;
+        border-color: $block-bg;
+        padding: 0 20px;
+        &::-webkit-input-placeholder,
+        &::-moz-placeholder,          
+        &:-moz-placeholder,           
+        &:-ms-input-placeholder {
+            color: #444;
+            font-family: Oswald;
+            font-size: 20px;
+            font-weight: 400;
+            line-height: 20px;
+            text-transform: uppercase;
+        }
+    }
+}
+#input-name {
+    width: 505px;
+}
+#input-weight {
+    width: 475px;
+}
+#input-age {
+    width: 435px;
+}
+.questionnaire__goals {
+    margin-top: 50px;
+    padding-left: 40px;
+    border: 1px solid $block-bg;
+    p {
+        margin: 30px 0;
+        padding-left: 16px;
+    }
+    label {
+        position: relative;
+        padding-left: 60px;
+        &::before {
+            content: "";
+            position: absolute;
+            top: -5px;
+            left: 0;
+            @include size(40px);
+            border: 1px solid $block-bg;
+            border-radius: 50%;
+        }
+    }
+    input {
+        opacity: 0;
+        &:checked+label::after {
+            content: "";
+            position: absolute;
+            left: 10px;
+            @include size(20px);
+            background-color: $icon-bg;
+            border-radius: 50%;
+        }
+    }
+}

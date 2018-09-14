@@ -15,7 +15,7 @@
         <navigation class="main-header__nav main-navigation">
             <ul class="main-header__logo">
                 <li class="main-header__item">
-                    <a href="#" class="main-header__link">
+                    <a href="index.html" class="main-header__link">
                         <span class="main-header__logo-icon"></span>
                         <span class="main-header__logo-text"></span>
                     </a>
@@ -44,66 +44,68 @@
 
                 <fieldset class="program-selection__questionnaire questionnaire">
                     <legend>
-                        <p class="questionnaire__caption">
+                        <h3 class="questionnaire__caption">
                             Заполните анкету и мы подберем 
                             программу питания для вашего кота
-                            </p>
+                        </h3>
                     </legend>
 
-                    <div class="questionnaire__main-information questionnaire__main-information_left">
+                    <div class="questionnaire__main-information">
                         <p><label for="input-name">Имя:<sup>*</sup><input type="text" id="input-name" name="input-name" placeholder="Барсик"></label></p>
                         <p><label for="input-weight">Вес (кг):<sup>*</sup><input type="text" id="input-weight" name="input-weight" placeholder="7"></label></p>
                         <p><label for="input-age">Возраст (лет):<input type="text" id="input-age"  name="input-age" placeholder="7"></label></p>
                     </div>
 
-                    <div class="questionnaire__goal questionnaire__goal_right">
-                        <p>
-                            <label for="radio-slim"><input type="radio" id="radio-slim" name="goal" checked>Похудение</label>
-                            <label for="radio-pro"><input type="radio" id="radio-pro" name="goal">Набор массы</label>
-                            <label for="radio-need-advice"><input type="radio" id="radio-need-advice" name="goal">Не знаю (Нужен ваш совет)</label>
-                        </p>
+                    <div class="questionnaire__goals">
+                        <p><input type="radio" id="radio-slim" name="goal" checked><label for="radio-slim">Похудение</label></p>
+                        <p><input type="radio" id="radio-pro" name="goal"><label for="radio-pro">Набор массы</label></p>
+                        <p><input type="radio" id="radio-need-advice" name="goal"><label for="radio-need-advice">Не знаю (Нужен ваш совет)</label></p>
                     </div>
 
                 </fieldset><!--questionnaire-->
 
                 <fieldset class="program-selection__contacts contacts-form">
                     <legend>
-                        <h2 class="program-selection__caption">Контактные данные (владельца кота)</h2>
+                        <h2 class="program-selection__caption"><span>Контактные данные (владельца кота)</span></h2>
                     </legend>
 
-                    <div class="contacts-form__email contacts-form__email-left">
+                    <div class="contacts-form__email">
                         <label for="email-adress">e-mail:<sup>*</sup><input type="email" name="email-adress" id="email-adress" placeholder="kuklachev@gmail.com"></label>
                     </div>
 
-                    <div class="contacts-form__tel contacts-form__telemail-right">
+                    <div class="contacts-form__tel">
                         <label for="tel">Телефон:<sup>*</sup><input type="tel" name="tel" id="tel" placeholder="8 (960) 900-60-90"></label>
                     </div>
 
                 </fieldset><!--contacts-form-->
 
-                <fieldset class="program-selection__contacts comments-form">
+                <fieldset class="program-selection__comments comments-form">
                     <legend>
-                        <h2 class="program-selection__caption">Комментарий</h2>
+                        <h2 class="program-selection__caption"><span>Комментарий</span></h2>
                     </legend>
 
-                    <textarea name="comments-textarea" id="comments-textarea" rows="10" placeholder="Расскажите обо всех повадках кота">
-
-                    </textarea>
+                    <div class="comments-form__textarea-wrapper">
+                        <textarea name="comments-textarea" id="comments-textarea" rows="7" placeholder="Расскажите обо всех повадках кота">Расскажите обо всех повадках кота
+                        </textarea>
+                    </div>
 
                 </fieldset><!--comments-form-->
 
 
-                <fieldset class="program-selection__contacts additionally-form">
+                <fieldset class="program-selection__additionally additionally-form">
                     <legend>
-                        <h2 class="program-selection__caption">Дополнительно</h2>
+                        <h2 class="program-selection__caption"><span>Дополнительно</span></h2>
                     </legend>
 
-                    <label for="checkbo-suger"><input type="checkbox" id="checkbo-suger" name="checkbox-suger" checked>Сахарозаменитель</label>
-                    <label for="checkbo-water"><input type="checkbox" id="checkbo-water" name="checkbox-water">Питьевая вода</label>
-                    <label for="checkbo-milk"><input type="checkbox" id="checkbo-milk" name="checkbox-milk">Молоко</label>
-                    <label for="checkbo-vitamin"><input type="checkbox" id="checkbo-vitamin" name="checkbox-vitamin">Витамины</label>
+                    <p><input type="checkbox" id="checkbox-suger" name="checkbox-suger" checked><label for="checkbox-suger">Сахарозаменитель</label></p>
+                    <p><input type="checkbox" id="checkbox-water" name="checkbox-water"><label for="checkbox-water">Питьевая вода</label></p>
+                    <p><input type="checkbox" id="checkbox-milk" name="checkbox-milk"><label for="checkbox-milk">Молоко</label></p>
+                    <p><input type="checkbox" id="checkbox-vitamin" name="checkbox-vitamin"><label for="checkbox-vitamin">Витамины</label></p>
 
                 </fieldset><!--additionally-form-->
+
+                <input type="submit" value="Отправить заявку" id="send-application" class="button program-selection__button program-selection__button--submit">
+                <span class="program-selection__obligatory-field">* — Обязательные поля</span>
 
             </form><!--"program-selection__form-->
 
