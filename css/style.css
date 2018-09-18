@@ -55,6 +55,12 @@ a:hover {
 a:active {
   opacity: 0.3; }
 
+.hide {
+  display: none !important; }
+
+.show-b {
+  display: block !important; }
+
 .button {
   display: block;
   width: 245px;
@@ -83,7 +89,7 @@ a:active {
     .main-header {
       padding-top: 0;
       padding-bottom: 0;
-      min-height: 264px; } }
+      min-height: auto; } }
 
 .main-header__nav {
   width: 100%;
@@ -113,6 +119,7 @@ a:active {
       padding: 0; } }
   @media (max-width: 320px) {
     .main-header__logo {
+      position: relative;
       float: none;
       width: 100%;
       background-color: white; } }
@@ -122,6 +129,44 @@ a:active {
       opacity: 0.6; }
     .main-header__logo .main-header__link:active {
       opacity: 0.3; }
+
+.burger-menu {
+  display: none; }
+  @media (max-width: 320px) {
+    .burger-menu {
+      display: block;
+      position: absolute;
+      top: 20px;
+      right: 10px;
+      width: 25px;
+      height: 20px;
+      cursor: pointer; } }
+
+.burger-menu__link {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 100%;
+  z-index: 2; }
+  .burger-menu__link--open::after {
+    content: "";
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    width: 25px;
+    height: 2px;
+    background-color: #000;
+    box-shadow: 0px 7px 0px 0px #000, 0px 14px 0px 0px #000; }
+  .burger-menu__link--close {
+    display: none; }
+    .burger-menu__link--close::before {
+      content: "";
+      position: absolute;
+      top: 0px;
+      right: 0px;
+      width: 25px;
+      height: 25px;
+      background: url("../img/m-close.png") no-repeat 50% 50%; }
 
 .main-header__logo-icon {
   display: inline-block;
@@ -137,9 +182,10 @@ a:active {
       height: 58px; } }
   @media (max-width: 320px) {
     .main-header__logo-icon {
-      width: 100px;
+      width: 80px;
       height: 58px;
       background-image: url("../img/logo-mobile.png");
+      background-position-x: 0%;
       background-size: 33px 38px; } }
 
 @media (max-width: 320px) {
@@ -163,6 +209,7 @@ a:active {
       width: 73%; } }
   @media (max-width: 320px) {
     .main-header__menu {
+      display: none;
       float: none;
       width: 100%;
       background-color: white; } }
@@ -208,7 +255,8 @@ a:active {
   @media (max-width: 320px) {
     .main-menu__link {
       font-size: 20px;
-      line-height: 60px; } }
+      line-height: 60px;
+      font-weight: 700; } }
   .main-menu__link:hover {
     opacity: 0.6; }
   .main-menu__link:active {

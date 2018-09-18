@@ -9,7 +9,7 @@
     @media #{$mobile} {
         padding-top: 0;
         padding-bottom: 0;
-        min-height: 264px;
+        min-height: auto;
     }
 }
 .main-header__nav {
@@ -36,6 +36,7 @@
         padding: 0;
     }
     @media #{$mobile} {
+        position: relative;
         float: none;
         width: 100%;
         background-color: rgb(255,255,255);
@@ -49,7 +50,48 @@
             opacity: 0.3;
         }
     }
+}    
+.burger-menu {
+    display: none;
+    @media #{$mobile} {
+        display: block;
+        position: absolute;
+        top: 20px;
+        right: 10px;
+        @include size(25px, 20px);
+        cursor: pointer;
+    }
 }
+.burger-menu__link {
+    position: relative;
+    display: block;
+    @include size(100%);
+    z-index: 2;
+    &--open {
+        &::after {
+            content: "";
+            position: absolute;
+            top: 0px;
+            right: 0px;
+            @include size(25px, 2px);
+            background-color: #000;
+            box-shadow: 0px 7px 0px 0px #000,
+                        0px 14px 0px 0px #000;
+        }
+    }
+    &--close {
+        display: none;
+        &::before {
+            content: "";
+            position: absolute;
+            top: 0px;
+            right: 0px;
+            @include size(25px);
+            background: url("../img/m-close.png") no-repeat 50% 50%;
+        }
+    }
+}
+
 .main-header__logo-icon {
     display: inline-block;
     vertical-align: top;
@@ -61,8 +103,9 @@
         @include size(173px, 58px);
     }
     @media #{$mobile} {
-        @include size(100px, 58px);
+        @include size(80px, 58px);
         background-image: url("../img/logo-mobile.png");
+        background-position-x: 0%;
         background-size: 33px 38px;
     }
 }
@@ -86,6 +129,7 @@
         width: 73%;
     }
     @media #{$mobile} {
+        display: none;
         float: none;
         width: 100%;
         background-color: rgb(255,255,255);
@@ -136,6 +180,7 @@
     @media #{$mobile} {
         font-size: 20px;
         line-height: 60px;
+        font-weight: 700;
     }
     &:hover {
         opacity: 0.6;
