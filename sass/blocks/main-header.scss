@@ -41,7 +41,13 @@
         background-color: rgb(255,255,255);
     }
     .main-header__link {
-        display: block;
+        display: inline-block;
+        &:hover {
+            opacity: 0.6;
+        }
+        &:active {
+            opacity: 0.3;
+        }
     }
 }
 .main-header__logo-icon {
@@ -55,8 +61,18 @@
         @include size(173px, 58px);
     }
     @media #{$mobile} {
-        background-image: url("../img/logo-mobile-header.png");
-        background-size: 209px 38px;
+        @include size(100px, 58px);
+        background-image: url("../img/logo-mobile.png");
+        background-size: 33px 38px;
+    }
+}
+.main-header__logo-text {
+    @media #{$mobile} {
+        display: inline-block;
+        vertical-align: top;
+        @include size(101px, 58px);
+        background: url("../img/logo-mobile-header.png") 50% 50% no-repeat;
+        background-size: 101px 18px;
     }
 }
 .main-header__menu {
@@ -121,6 +137,12 @@
         font-size: 20px;
         line-height: 60px;
     }
+    &:hover {
+        opacity: 0.6;
+    }
+    &:active {
+        opacity: 0.3;
+    }
 }
 body.home-page .main-menu__link {
     @media (min-width: 769px) {
@@ -137,7 +159,7 @@ body.home-page .main-menu__link {
 }
 body.home-page .main-menu__link--current {
     @media (min-width: 769px) {
-        border-bottom-color: 2px solid rgb(255, 255, 255);
+        border-bottom-color: rgb(255, 255, 255);
     }
 }
 

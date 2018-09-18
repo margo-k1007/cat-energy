@@ -2,12 +2,30 @@
     margin-bottom: 25px; 
     legend {
         margin-bottom: 40px;
+        @media #{$mobile} {
+            margin-bottom: 5px;    
+        }
+    }
+    @media #{$tablet} {
+        margin-bottom: 5px;
+    }
+    @media #{$mobile} {
+        padding: 0;    
     }
 }
 .contacts-form__email,
 .contacts-form__tel {
     float: left;
     width: 50%;
+    @media #{$tablet} {
+        float: none;
+        width: 100%;
+        margin-bottom: 20px;
+        padding-left: 30px;
+    }
+    @media #{$mobile} {
+        padding-left: 0;
+    }    
 }
 .contacts-form {
     input {
@@ -17,6 +35,12 @@
     border-color: $block-bg;
     padding: 0 10px;
     padding-right: 50px;
+    @media #{$tablet} {
+        height: 52px;
+    }
+    @media #{$mobile} {
+        height: 45px;
+    }
     }
     label {
         position: relative;
@@ -27,13 +51,41 @@
             right: 20px;
             @include size(24px);
             background: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'%3e%3cpath d='M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z'/%3e%3cpath d='M0 0h24v24H0z' fill='none'/%3e%3c/svg%3e") 50% 50% no-repeat;
+            @media #{$mobile} {
+                top: 1px;
+                right: 10px;   
+            }
         }
+        &:active::after,
+        &:focus::after {
+            background: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'%3e%3cpath d='M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z' fill='green'/%3e%3cpath d='M0 0h24v24H0z' fill='none'/%3e%3c/svg%3e") 50% 50% no-repeat;
+        }
+    }
+}
+#email {
+    @media #{$tablet} {
+        width: 555px;
+    }
+    @media #{$mobile} {
+        width: 200px;
+    }
+}
+#tel {
+    @media #{$tablet} {
+        width: 535px;
+    }
+    @media #{$mobile} {
+        width: 185px;
     }
 }
 .contacts-form__tel {
     label {
         &::after {
             background: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'%3e%3cpath d='M0 0h24v24H0z' fill='none'/%3e%3cpath d='M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z'/%3e%3c/svg%3e") 50% 50% no-repeat;
+        }
+        &:active::after,
+        &:focus::after {
+            background: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'%3e%3cpath d='M0 0h24v24H0z' fill='none'/%3e%3cpath d='M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z' fill='green'/%3e%3c/svg%3e") 50% 50% no-repeat;
         }
     }
 }

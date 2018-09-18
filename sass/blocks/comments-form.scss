@@ -1,6 +1,16 @@
 #comments-textarea {
     width: 100%;
+    text-transform: uppercase;
+    @media #{$tablet} {
+        margin-bottom: 30px;
+    }
 }
 .comments-form__textarea-wrapper {
     padding: 30px;
+    @media #{$tablet} {
+        padding: 20px;
+    }
+    @media #{$mobile} {
+        padding: 0;
+    }
 }

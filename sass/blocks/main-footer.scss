@@ -193,19 +193,22 @@
     &--vk {
         background: url("../img/icon-vk.svg") no-repeat 50% 50%;
         &:hover {
-            background-image: url("../img/icon-vk.svg");
+            background-image: url("../img/icon-vk-hover.svg");
+            opacity: 1;
         }
     }
     &--inst {
         background: url("../img/icon-inst.svg") no-repeat 50% 50%;
         &:hover {
-            background-image: url("../img/icon-inst.svg");
+            background-image: url("../img/icon-inst-hover.svg");
+            opacity: 1;
         }
     }
     &--fb {
         background: url("../img/icon-fb.svg") no-repeat 50% 50%;
         &:hover {
-            background-image: url("../img/icon-fb.svg");
+            background-image: url("../img/icon-fb-hover.svg");
+            opacity: 1;
         }
     }
 }

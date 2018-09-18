@@ -1,6 +1,9 @@
 .additionally-form {
     font-size: 0;
     margin-bottom: 50px;
+    @media #{$tablet} {
+        margin-bottom: 30px;
+    }
     legend {
         margin-bottom: 25px;
     }
@@ -8,6 +11,14 @@
         display: inline-block;
         width: 25%;
         padding-left: 20px;
+        @media #{$tablet} {
+            width: 50%;
+            margin-bottom: 30px;
+        }
+        @media #{$mobile} {
+            display: block;
+            width: 100%;
+        }
     }
     label {
         position: relative;
@@ -19,6 +30,12 @@
             left: 0;
             @include size(40px);
             border: 1px solid $block-bg;
+        }
+        &:hover {
+            opacity: 0.8;
+        }
+        &:active {
+            opacity: 0.3;
         }
     }
     input {

@@ -3,6 +3,13 @@
     margin-bottom: 20px;
     padding: 0 40px;
     border: none;
+    @media #{$tablet} {
+        margin-bottom: 45px;
+    }
+    @media #{$mobile} {
+        margin-bottom: 5px;
+        padding: 0;
+    }
 }
 .questionnaire__caption {
     width: 325px;
@@ -11,14 +18,29 @@
     font-weight: 400;
     line-height: 30px;
     text-transform: uppercase;
+    @media #{$mobile} {
+        width: 227px;
+        font-size: 14px;
+        line-height: 18px;
+    }
 }
 .questionnaire__main-information,
 .questionnaire__goals {
     float: left;
     width: 50%;
+    @media #{$tablet} {
+        float: none;
+        width: 100%;
+    }
 }
 .questionnaire__main-information {
     padding-top: 30px;
+    @media #{$mobile} {
+        padding-top: 10px;
+    }
+    p {
+        margin: 0;
+    }
     input {
         height: 55px;
         margin-left: 15px;
@@ -35,28 +57,76 @@
             line-height: 20px;
             text-transform: uppercase;
         }
+        @media #{$tablet} {
+            height: 52px;
+        }
+        @media #{$mobile} {
+            height: 45px;
+            margin: 10px 0;
+        }
     }
 }
 #input-name {
     width: 505px;
+    @media #{$tablet} {
+        width: 570px;
+    }
+    @media #{$mobile} {
+        width: 200px;
+    }
 }
 #input-weight {
     width: 475px;
+    @media #{$tablet} {
+        width: 540px;
+    }
+    @media #{$mobile} {
+        width: 175px;
+    }
 }
 #input-age {
     width: 435px;
+    @media #{$tablet} {
+        width: 498px;
+    }
+    @media #{$mobile} {
+        width: 140px;
+    }
 }
 .questionnaire__goals {
     margin-top: 50px;
     padding-left: 40px;
     border: 1px solid $block-bg;
+    @media #{$tablet} {
+        margin-top: 85px;
+        padding-left: 0px;
+    }
+    @media #{$mobile} {
+        margin-top: 0;
+        border: none;
+    }
     p {
         margin: 30px 0;
         padding-left: 16px;
+        @media #{$tablet} {
+            padding-left: 0px;
+        }
+        @media #{$mobile} {
+            margin: 25px 0;
+        }
     }
     label {
         position: relative;
         padding-left: 60px;
+        @media #{$mobile} {
+            padding-left: 45px;
+        }
+        &:hover {
+            opacity: 0.8;
+        }
+        &:active {
+            opacity: 0.3;
+        }
         &::before {
             content: "";
             position: absolute;
@@ -65,10 +135,16 @@
             @include size(40px);
             border: 1px solid $block-bg;
             border-radius: 50%;
+            @media #{$mobile} {
+                @include size(30px);
+            }
         }
     }
     input {
         opacity: 0;
+        @media #{$mobile} {
+            width: 0;;
+        }
         &:checked+label::after {
             content: "";
             position: absolute;
@@ -76,6 +152,10 @@
             @include size(20px);
             background-color: $icon-bg;
             border-radius: 50%;
+            @media #{$mobile} {
+                @include size(15px);
+                left: 8px;
+            }
         }
     }
 }
