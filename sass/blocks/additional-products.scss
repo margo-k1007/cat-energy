@@ -1,7 +1,7 @@
 .additional-products {
-    @include clearfix();
-    padding-left: 40px;
-    padding-right: 40px;
+    // @include clearfix();
+    // padding-left: 40px;
+    // padding-right: 40px;
     margin-bottom: 85px;
     @media #{$tablet} {
         margin-bottom: 65px;
@@ -13,7 +13,8 @@
 }
 .additional-products__title {
     position: relative;
-    margin-bottom: 80px;
+    margin-bottom: 73px;
+    padding: 0 20px;
     font-size: 36px;
     line-height: 1.2;
     font-weight: 400;
@@ -42,9 +43,15 @@
         background-color: rgb(255,255,255);
     }
 }
+.additional-products__inner {
+    display: flex;
+    align-items: center;
+}
 .additional-products__table {
-    float: left;
-    width: 898px;
+    // float: left;
+    width: 69%;
+    margin-left: 3%;
+    margin-right: 3%;
     display: table;
     max-width: 100%;
     border-collapse: collapse;
@@ -151,8 +158,16 @@
     }
 }
 .addtional-products__present {
-    float: right;
-    @include size(245px, 290px);
+    // float: right;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px;
+    padding-bottom: 30px;
+    @include size(19%, 290px);
+    margin-left: 3%;
+    margin-right: 3%;
     background: $icon-bg url("../img/catalog-photo-desktop.jpg") 50% 50% no-repeat;
     @media #{$tablet} and (min-width: 321px) {
         @include clearfix();
@@ -169,7 +184,8 @@
     }
 }
 .present__icon {
-    position: relative;
+    // position: relative;
+    display: flex;
     @include size(100%, 120px);
     @media #{$tablet}  and (min-width: 321px) {
         float: left;
@@ -179,15 +195,16 @@
         height: 180px;
     }
     svg {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        margin-left: -27px;
-        margin-top: -27px;
+        // position: absolute;
+        // top: 50%;
+        // left: 50%;
+        // margin-left: -27px;
+        // margin-top: -27px;
+        margin: auto;
     }
 }
 .present__text {
-    padding: 35px 40px;
+    // padding: 35px 40px;
     font-size: 16px;
     color: rgb(255,255,255);
     font-family: "Arial", sans-serif;

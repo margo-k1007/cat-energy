@@ -74,8 +74,12 @@
     }
 }
 .main-footer__contacts {
-    @include clearfix();
+    // @include clearfix();
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
     @include size(570px, 200px);
+    padding: 0 25px;
     background-color: rgb(255, 255, 255);
     @media #{$tablet} {
         @include clearfix();
@@ -97,9 +101,9 @@
 }
 
 .main-footer__invite {
-    float: left;
-    width: 50%;
-    padding: 66px 77px;
+    // float: left;
+    width: 30%;
+    // padding: 66px 77px;
     font-size: 20px;
     line-height: 1.2;
     color: rgb(17,17,17);
@@ -116,9 +120,9 @@
     }
 }
 .main-footer__adress {
-    float: right;
-    width: 50%;
-    padding: 66px 44px;
+    // float: right;
+    width: 30%;
+    // padding: 66px 44px;
     font-size: 16px;
     line-height: 1.2;
     color: rgb(68,68,68);
@@ -136,9 +140,13 @@
     }
 }
 .main-footer__row {
-    @include clearfix();
+    // @include clearfix();
     min-height: 150px;
-    padding: 50px 40px;
+    margin: 0 40px;
+    // padding: 50px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     @media #{$tablet} {
         padding-left: 0;
         padding-right: 0;
@@ -151,8 +159,8 @@
 .main-footer__logo,
 .main-footer__socials, 
 .main-footer__developed {
-    float: left;
-    width: 33.3%;
+    // float: left;
+    width: 25%;
     @media #{$mobile} {
         float: none;
         display: block;
@@ -162,11 +170,6 @@
         padding-top: 20px;
     }
 }
-.main-footer__link svg {
-    position: relative;
-    top: 15px;
-    margin-left: 20px;
-}
 .main-footer__socials {
     @media #{$mobile} {
         border-top: 1px solid rgb(203, 203, 203);
@@ -175,16 +178,20 @@
     }
 }
 .socials__list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     margin: 0;
     padding: 0;
     list-style: none;
     font-size: 0;
-    text-align: center;
+    // text-align: center;
 }
 .socials__item {
-    display: inline-block;
-    vertical-align: middle;
+    // display: inline-block;
+    // vertical-align: middle;
     @include size(40px);
+    margin-right: 10px;
 }
 .socials__link {
     display: inline-block;
@@ -213,11 +220,17 @@
     }
 }
 .main-footer__developed {
-    text-align: right;
+    // text-align: right;
     @media #{$mobile} {
         text-align: left;
     }
+    .main-footer__link {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+    }
     svg {
+        margin-left: 20px;
         @media #{$mobile} {
             float: right;
             top: 0;
