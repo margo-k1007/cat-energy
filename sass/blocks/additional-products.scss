@@ -4,7 +4,7 @@
     // padding-right: 40px;
     margin-bottom: 85px;
     @media #{$tablet} {
-        margin-bottom: 65px;
+        margin-bottom: 75px;
     }
     @media #{$mobile} {
         margin-bottom: 35px;
@@ -20,6 +20,9 @@
     font-weight: 400;
     color: rgb(17,17,17);
     font-family: "Oswald", sans-serif;
+    @media #{$tablet} {
+        margin-bottom: 77px;
+    }
     @media #{$mobile} {
         font-size: 24px;
     }
@@ -46,6 +49,9 @@
 .additional-products__inner {
     display: flex;
     align-items: center;
+    @media #{$tablet} {
+        flex-direction: column;
+    }
 }
 .additional-products__table {
     // float: left;
@@ -56,9 +62,10 @@
     max-width: 100%;
     border-collapse: collapse;
     @media #{$tablet} {
-        float: none;
-        display: block;
+        // float: none;
+        // display: block;
         width: 100%;
+        margin: 0;
         margin-bottom: 70px;
         border-bottom: 1px solid rgb(203,203,203);
     }
@@ -73,9 +80,13 @@
     border-bottom: 1px solid rgb(203,203,203);
     @media #{$tablet} {
         display: table;
-        @include size(100%, 139px);
+        @include size(90%, 139px);
         border-collapse: collapse;
         border-bottom: none;
+        padding-left: 40px;
+        padding-right: 40px;
+        margin-left: 5%;
+        margin-right: 5%;
     }
     @media #{$mobile} {
         display: block;
@@ -147,7 +158,8 @@
     line-height: 40px;
     margin-right: 0;
     @media #{$tablet} {
-        width: 630px;
+        // width: 630px;
+        width: 83%;
         margin: 0;
         position: absolute;
     }
@@ -170,12 +182,14 @@
     margin-right: 3%;
     background: $icon-bg url("../img/catalog-photo-desktop.jpg") 50% 50% no-repeat;
     @media #{$tablet} and (min-width: 321px) {
-        @include clearfix();
-        float: none;
-        @include size(700px, 200px);
+        // @include clearfix();
+        // float: none;
+        flex-direction: row;
+        @include size(100%, 200px);
         background-image: url("../img/catalog-photo-tablet.jpg");
         margin-left: -40px;
         margin-right: -40px;
+        padding-bottom: 40px;
     }
     @media #{$mobile} {
         float: none;
@@ -188,8 +202,10 @@
     display: flex;
     @include size(100%, 120px);
     @media #{$tablet}  and (min-width: 321px) {
-        float: left;
-        @include size(50%, 200px);
+        // float: left;
+        // margin: 0;
+        @include size(50%, auto);
+        margin-left: 8%;
     }
     @media #{$mobile} {
         height: 180px;
@@ -201,6 +217,9 @@
         // margin-left: -27px;
         // margin-top: -27px;
         margin: auto;
+        @media #{$tablet} {
+           margin: 0;;
+        }
     }
 }
 .present__text {
@@ -210,9 +229,12 @@
     font-family: "Arial", sans-serif;
     text-align: center;
     @media #{$tablet} and (min-width: 321px) {
-        float: right;
-        width: 300px;
+        // float: right;
+        width: 50%;
         padding: 60px;
+        padding-left: 50px;
+        margin: 0;
+        text-align: left;
     }
     @media #{$mobile} {
         padding: 0 45px;

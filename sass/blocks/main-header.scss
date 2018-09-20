@@ -1,10 +1,11 @@
 .main-header {
     // padding-top: 54px;
     margin-top: 35px;
-    min-height: 140px;
+    min-height: 130px;
     @media #{$tablet} {
-        padding-top: 20px;
-        padding-bottom: 20px;
+        // padding-top: 20px;
+        // padding-bottom: 20px;
+        margin-top: 5px;
     }
     @media #{$mobile} {
         padding-top: 0;
@@ -15,9 +16,11 @@
 .main-header__nav {
     // width: 100%;
     display: flex;
-    min-height: 70px;
+    margin-left: 20px;
+    margin-right: 40px;
     @media #{$tablet} {
         padding: 0;
+        margin: 0;
     }
     @media #{$mobile} {
         padding: 0;
@@ -39,7 +42,8 @@
     list-style: none;
     @media #{$tablet} {
         width: 27%;
-        padding: 0;
+        margin-left: 0;
+        // padding: 0;
     }
     @media #{$mobile} {
         position: relative;
@@ -135,6 +139,7 @@
     align-items: center;
     flex-wrap: wrap;
     width: 50%;
+    padding-left: 0;
     list-style: none;
     text-align: right;
     // font-size: 0;
@@ -155,17 +160,21 @@
     // min-width: 169px;
     // padding: 15px;
     // padding-top: 20px;
-    margin: 10px 40px 0 10px;
-    // &:first-child {
+    width: 29%;
+    margin: 10px 0 10px 4.33%;
+    //     // &:first-child {
         //     // padding-left: 0;
         // }
         // &:last-child {
             //     // padding-right: 0;
             // }
-    @media #{$tablet} {
-        min-width: 162px;
-        padding: 5px;
-    }
+        @media #{$tablet} {
+        width: auto;
+        margin-left: 7%;
+            &:first-child {
+            margin-left: 0;
+            }
+        }
     @media #{$mobile} {
         display: block;
         width: 100%;

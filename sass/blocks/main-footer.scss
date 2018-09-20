@@ -54,7 +54,6 @@
     }
     @media #{$tablet} {
         position: relative;
-        height: 363px;
         margin-left:  -30px;
         margin-right: -30px;
         padding-left: 30px;
@@ -82,7 +81,7 @@
     padding: 0 25px;
     background-color: rgb(255, 255, 255);
     @media #{$tablet} {
-        @include clearfix();
+        // @include clearfix();
         @include size(768px, 200px);
         width: 100%;
         position: absolute;
@@ -90,6 +89,9 @@
         margin: 0;
         margin-left:  -30px;
         margin-right: -30px;
+        justify-content: space-between;
+        padding: 0 70px;
+        background-color: $block-bg;
     }
     @media #{$mobile} {
         @include size(320px, 115px);
@@ -109,10 +111,11 @@
     color: rgb(17,17,17);
     font-family: "Oswald", sans-serif;
     text-transform: uppercase;
-    @media #{$tablet} {
-        padding-right: 100px;
-        padding-left: 70px;
-    }
+    // @media #{$tablet} {
+    //     // padding-right: 100px;
+    //     // padding-left: 70px;
+    //     margin-top: 25px;
+    // }
     @media #{$mobile} {
         font-size: 16px;
         padding: 30px 20px;
@@ -129,8 +132,9 @@
     font-family: "Arial", sans-serif;
     @media #{$tablet} {
         text-align: right;
-        padding-left: 145px;
-        padding-right: 55px;
+        // margin-top: 25px;
+        // padding-left: 145px;
+        // padding-right: 55px;
     }
     @media #{$mobile} {
         font-size: 14px;
@@ -150,7 +154,8 @@
     @media #{$tablet} {
         padding-left: 0;
         padding-right: 0;
-        margin-left: -20px;
+        // margin-left: -20px;
+        margin: 0;
     }
     @media #{$mobile} {
         padding: 0 20px;
