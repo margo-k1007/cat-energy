@@ -24,6 +24,7 @@
     }
     @media #{$mobile} {
         padding: 0;
+        flex-direction: column;
     }
 }
 .main-header__logo {
@@ -47,9 +48,11 @@
     }
     @media #{$mobile} {
         position: relative;
-        float: none;
+        // float: none;
         width: 100%;
-        background-color: rgb(255,255,255);
+        margin-top: 0;
+        // background-color: rgb(255,255,255);
+        border-bottom: 1px solid rgb(203,203,203);
     }
     .main-header__link {
         display: inline-block;
@@ -67,7 +70,7 @@
         display: block;
         position: absolute;
         top: 20px;
-        right: 10px;
+        right: 0;
         @include size(25px, 20px);
         cursor: pointer;
     }
@@ -150,7 +153,7 @@
         display: none;
         float: none;
         width: 100%;
-        background-color: rgb(255,255,255);
+        // background-color: rgb(255,255,255);
     }
 }
 .main-menu__item {
@@ -178,8 +181,9 @@
     @media #{$mobile} {
         display: block;
         width: 100%;
+        margin: 0;
         padding: 0;
-        border-top: 1px solid rgb(203,203,203);
+        border-bottom: 1px solid rgb(203,203,203);
         text-align: center;
     }
 }
