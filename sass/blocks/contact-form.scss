@@ -3,7 +3,7 @@
     legend {
         margin-bottom: 40px;
         @media #{$mobile} {
-            margin-bottom: 5px;    
+            margin-bottom: 10px;    
         }
     }
     @media #{$tablet} {
@@ -34,6 +34,7 @@
     }
     @media #{$mobile} {
         padding-left: 0;
+        margin-bottom: 15px;
     }    
 }
 .contacts-form {

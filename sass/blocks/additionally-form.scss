@@ -4,6 +4,9 @@
     @media #{$tablet} {
         margin-bottom: 30px;
     }
+    @media #{$mobile} {
+        padding: 0;
+    }
     legend {
         margin-bottom: 15px;
     }
@@ -19,6 +22,9 @@
         @media #{$mobile} {
             display: block;
             width: 100%;
+            margin-top: 5px;
+            margin-bottom: 15px;
+            padding-left: 0;
         }
     }
     .additionally-form__fields {
@@ -31,6 +37,9 @@
     label {
         position: relative;
         padding-left: 60px;
+        @media #{$mobile} {
+            padding-left: 45px;
+        }
         &::before {
             content: "";
             position: absolute;
@@ -38,6 +47,9 @@
             left: 0;
             @include size(40px);
             border: 1px solid $block-bg;
+            @media #{$mobile} {
+                @include size(30px);
+            }
         }
         &:hover {
             opacity: 0.8;
@@ -54,6 +66,10 @@
             left: 10px;
             @include size(24px);
             background: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'%3e%3cpath d='M0 0h24v24H0z' fill='none'/%3e%3cpath d='M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z' fill='rgb(104, 183, 56)'/%3e%3c/svg%3e") 50% 50% no-repeat;
+            @media #{$mobile} {
+                left: 5px;
+                top: 0px;
+            }
         }
     }
 }

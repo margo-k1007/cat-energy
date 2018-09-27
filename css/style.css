@@ -1650,6 +1650,7 @@ a:active {
       margin-bottom: 35px; } }
   @media (max-width: 320px) {
     .program-selection__title {
+      margin-top: 17px;
       margin-bottom: 10px;
       font-size: 36px; } }
 
@@ -1679,6 +1680,9 @@ a:active {
     background-color: white;
     padding: 0 20px;
     display: inline-block; }
+    @media (max-width: 320px) {
+      .program-selection__caption span {
+        padding-left: 0; } }
   @media (max-width: 320px) {
     .program-selection__caption {
       font-size: 24px;
@@ -1729,7 +1733,7 @@ fieldset {
       padding-right: 0; } }
   @media (max-width: 320px) {
     .questionnaire {
-      margin-bottom: 5px;
+      margin-bottom: 25px;
       padding: 0; } }
 
 .questionnaire__caption {
@@ -1767,6 +1771,8 @@ fieldset {
   margin-right: 40px; }
   @media (max-width: 320px) {
     .questionnaire__main-information {
+      margin-top: 5px;
+      margin-bottom: 20px;
       padding-top: 10px; } }
   .questionnaire__main-information p {
     margin-top: 8px;
@@ -1778,7 +1784,9 @@ fieldset {
         margin-right: 15px; } }
     @media (max-width: 320px) {
       .questionnaire__main-information p {
-        margin: 0; } }
+        margin-right: 0;
+        margin-top: 10px;
+        margin-bottom: 4px; } }
   .questionnaire__main-information label {
     display: flex;
     align-items: center; }
@@ -1794,7 +1802,7 @@ fieldset {
     @media (max-width: 320px) {
       .questionnaire__main-information input {
         height: 45px;
-        margin: 10px 0; } }
+        margin: 0; } }
     .questionnaire__main-information input::-webkit-input-placeholder, .questionnaire__main-information input::-moz-placeholder, .questionnaire__main-information input:-moz-placeholder, .questionnaire__main-information input:-ms-input-placeholder {
       color: #444;
       font-family: Oswald;
@@ -1823,7 +1831,8 @@ fieldset {
         padding-left: 0px; } }
     @media (max-width: 320px) {
       .questionnaire__goals p {
-        margin: 25px 0; } }
+        margin-top: 25px;
+        margin-bottom: 0px; } }
   .questionnaire__goals label {
     position: relative;
     padding-left: 60px; }
@@ -1881,7 +1890,7 @@ fieldset {
     margin-bottom: 40px; }
     @media (max-width: 320px) {
       .contacts-form legend {
-        margin-bottom: 5px; } }
+        margin-bottom: 10px; } }
   @media (max-width: 768px) {
     .contacts-form {
       margin-bottom: 2px; } }
@@ -1910,7 +1919,8 @@ fieldset {
   @media (max-width: 320px) {
     .contacts-form__email,
     .contacts-form__tel {
-      padding-left: 0; } }
+      padding-left: 0;
+      margin-bottom: 15px; } }
 
 .contacts-form input {
   flex: auto;
@@ -1971,6 +1981,11 @@ fieldset {
   @media (max-width: 768px) {
     .comments-form {
       margin-bottom: 0; } }
+  @media (max-width: 320px) {
+    .comments-form {
+      padding: 0; } }
+  .comments-form .program-selection__caption {
+    margin-top: 12px; }
 
 #comments-textarea {
   width: 100%;
@@ -1991,6 +2006,9 @@ fieldset {
   @media (max-width: 768px) {
     .additionally-form {
       margin-bottom: 30px; } }
+  @media (max-width: 320px) {
+    .additionally-form {
+      padding: 0; } }
   .additionally-form legend {
     margin-bottom: 15px; }
   .additionally-form p {
@@ -2004,7 +2022,10 @@ fieldset {
     @media (max-width: 320px) {
       .additionally-form p {
         display: block;
-        width: 100%; } }
+        width: 100%;
+        margin-top: 5px;
+        margin-bottom: 15px;
+        padding-left: 0; } }
   .additionally-form .additionally-form__fields {
     display: flex; }
     @media (max-width: 768px) {

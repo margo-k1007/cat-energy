@@ -3,6 +3,9 @@
     @media #{$tablet} {
         margin-bottom: 70px;
     }
+    @media #{$mobile} {
+        margin-bottom: 30px;
+    }
 }
 .program-selection__title {
     margin-top: 22px;
@@ -17,6 +20,7 @@
         margin-bottom: 35px;
     }
     @media #{$mobile} {
+        margin-top: 17px;
         margin-bottom: 10px;
         font-size: 36px;
     }
@@ -50,6 +54,9 @@
         background-color: rgb(255, 255, 255);
         padding: 0 20px;
         display: inline-block;
+        @media #{$mobile} {
+            padding-left: 0;
+        }
     }
     @media #{$mobile} {
         font-size: 24px;
