@@ -13,7 +13,8 @@
         padding-left: 20px;
         @media #{$tablet} {
             width: 50%;
-            margin-bottom: 30px;
+            margin-top: 30px;
+            margin-bottom: 20px;
         }
         @media #{$mobile} {
             display: block;
@@ -23,8 +24,8 @@
     .additionally-form__fields {
         display: flex;
         @media #{$tablet} {
-            flex-direction: column;
-            
+            // flex-direction: column;
+            flex-wrap: wrap;
         }
     }
     label {

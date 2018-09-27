@@ -1,17 +1,18 @@
 .comments-form {
     margin-bottom: 8px;
+    @media #{$tablet} {
+        margin-bottom: 0;
+    }
 }
 #comments-textarea {
     width: 100%;
     text-transform: uppercase;
-    @media #{$tablet} {
-        margin-bottom: 30px;
-    }
 }
 .comments-form__textarea-wrapper {
     padding: 30px;
     @media #{$tablet} {
-        padding: 20px;
+        padding: 40px 20px;
+        padding-bottom: 25px;
     }
     @media #{$mobile} {
         padding: 0;
