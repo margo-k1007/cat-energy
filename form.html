@@ -56,16 +56,18 @@
                         </h3>
                     </legend>
 
-                    <div class="questionnaire__main-information">
-                        <p><label for="input-name">Имя:<sup>*</sup><input type="text" id="input-name" name="input-name" placeholder="Барсик"></label></p>
-                        <p><label for="input-weight">Вес (кг):<sup>*</sup><input type="text" id="input-weight" name="input-weight" placeholder="7"></label></p>
-                        <p><label for="input-age">Возраст (лет):<input type="text" id="input-age"  name="input-age" placeholder="7"></label></p>
-                    </div>
-
-                    <div class="questionnaire__goals">
-                        <p><input type="radio" id="radio-slim" name="goal" checked><label for="radio-slim">Похудение</label></p>
-                        <p><input type="radio" id="radio-pro" name="goal"><label for="radio-pro">Набор массы</label></p>
-                        <p><input type="radio" id="radio-need-advice" name="goal"><label for="radio-need-advice">Не знаю (Нужен ваш совет)</label></p>
+                    <div class="questionnaire__fields">
+                        <div class="questionnaire__main-information">
+                            <p><label for="input-name">Имя:<sup>*</sup><input type="text" id="input-name" name="input-name" placeholder="Барсик"></label></p>
+                            <p><label for="input-weight">Вес (кг):<sup>*</sup><input type="text" id="input-weight" name="input-weight" placeholder="7"></label></p>
+                            <p><label for="input-age">Возраст (лет):<input type="text" id="input-age"  name="input-age" placeholder="7"></label></p>
+                        </div>
+    
+                        <div class="questionnaire__goals">
+                            <p><input type="radio" id="radio-slim" name="goal" checked><label for="radio-slim">Похудение</label></p>
+                            <p><input type="radio" id="radio-pro" name="goal"><label for="radio-pro">Набор массы</label></p>
+                            <p><input type="radio" id="radio-need-advice" name="goal"><label for="radio-need-advice">Не знаю (Нужен ваш совет)</label></p>
+                        </div>
                     </div>
 
                 </fieldset><!--questionnaire-->
@@ -75,13 +77,15 @@
                         <h2 class="program-selection__caption"><span>Контактные данные (владельца кота)</span></h2>
                     </legend>
 
-                    <div class="contacts-form__email">
-                        <label for="email">e-mail:<sup>*</sup><input type="email" name="email" id="email" placeholder="kuklachev@gmail.com"></label>
-                    </div>
-
-                    <div class="contacts-form__tel">
-                        <label for="tel">Телефон:<sup>*</sup><input type="tel" name="tel" id="tel" placeholder="8 (960) 900-60-90"></label>
-                    </div>
+                    <div class="contacts-form__fields">
+                        <div class="contacts-form__email">
+                            <label for="email">e-mail:<sup>*</sup><input type="email" name="email" id="email" placeholder="kuklachev@gmail.com"></label>
+                        </div>
+    
+                        <div class="contacts-form__tel">
+                            <label for="tel">Телефон:<sup>*</sup><input type="tel" name="tel" id="tel" placeholder="8 (960) 900-60-90"></label>
+                        </div>
+                    </div>      
 
                 </fieldset><!--contacts-form-->
 
@@ -103,11 +107,12 @@
                         <h2 class="program-selection__caption"><span>Дополнительно</span></h2>
                     </legend>
 
-                    <p><input type="checkbox" id="checkbox-suger" name="checkbox-suger" checked><label for="checkbox-suger">Сахарозаменитель</label></p>
-                    <p><input type="checkbox" id="checkbox-water" name="checkbox-water"><label for="checkbox-water">Питьевая вода</label></p>
-                    <p><input type="checkbox" id="checkbox-milk" name="checkbox-milk"><label for="checkbox-milk">Молоко</label></p>
-                    <p><input type="checkbox" id="checkbox-vitamin" name="checkbox-vitamin"><label for="checkbox-vitamin">Витамины</label></p>
-
+                    <div class="additionally-form__fields">
+                        <p><input type="checkbox" id="checkbox-suger" name="checkbox-suger" checked><label for="checkbox-suger">Сахарозаменитель</label></p>
+                        <p><input type="checkbox" id="checkbox-water" name="checkbox-water"><label for="checkbox-water">Питьевая вода</label></p>
+                        <p><input type="checkbox" id="checkbox-milk" name="checkbox-milk"><label for="checkbox-milk">Молоко</label></p>
+                        <p><input type="checkbox" id="checkbox-vitamin" name="checkbox-vitamin"><label for="checkbox-vitamin">Витамины</label></p>   
+                    </div>
                 </fieldset><!--additionally-form-->
 
                 <input type="submit" value="Отправить заявку" id="send-application" class="button program-selection__button program-selection__button--submit">

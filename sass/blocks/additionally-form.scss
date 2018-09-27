@@ -1,14 +1,14 @@
 .additionally-form {
-    font-size: 0;
-    margin-bottom: 50px;
+    // font-size: 0;
+    margin-bottom: 36px;
     @media #{$tablet} {
         margin-bottom: 30px;
     }
     legend {
-        margin-bottom: 25px;
+        margin-bottom: 15px;
     }
     p {
-        display: inline-block;
+        // display: inline-block;
         width: 25%;
         padding-left: 20px;
         @media #{$tablet} {
@@ -18,6 +18,13 @@
         @media #{$mobile} {
             display: block;
             width: 100%;
+        }
+    }
+    .additionally-form__fields {
+        display: flex;
+        @media #{$tablet} {
+            flex-direction: column;
+            
         }
     }
     label {

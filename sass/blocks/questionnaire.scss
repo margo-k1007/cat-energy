@@ -1,6 +1,6 @@
 .questionnaire {
     min-height: 340px;
-    margin-bottom: 20px;
+    margin-bottom: 34px;
     padding: 0 40px;
     border: none;
     @media #{$tablet} {
@@ -24,28 +24,54 @@
         line-height: 18px;
     }
 }
+.questionnaire__fields {
+    display: flex;
+    @media #{$tablet} {
+        flex-direction: column;
+    }
+}
 .questionnaire__main-information,
 .questionnaire__goals {
-    float: left;
+    // float: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     width: 50%;
     @media #{$tablet} {
-        float: none;
+        // float: none;
         width: 100%;
     }
 }
 .questionnaire__main-information {
-    padding-top: 30px;
+    margin-top: 30px;
+    margin-right: 40px;
     @media #{$mobile} {
         padding-top: 10px;
     }
     p {
-        margin: 0;
+        margin-top: 8px;
+        margin-bottom: 8px;
+        @media #{$mobile} {
+            margin: 0;
+        }
+    }
+    label {
+        display: flex;
+        align-items: center;
     }
     input {
+        flex: auto;
         height: 55px;
         margin-left: 15px;
         border-color: $block-bg;
         padding: 0 20px;
+        @media #{$tablet} {
+            height: 52px;
+        }
+        @media #{$mobile} {
+            height: 45px;
+            margin: 10px 0;
+        }
         &::-webkit-input-placeholder,
         &::-moz-placeholder,          
         &:-moz-placeholder,           
@@ -57,45 +83,38 @@
             line-height: 20px;
             text-transform: uppercase;
         }
-        @media #{$tablet} {
-            height: 52px;
-        }
-        @media #{$mobile} {
-            height: 45px;
-            margin: 10px 0;
-        }
     }
 }
-#input-name {
-    width: 505px;
-    @media #{$tablet} {
-        width: 570px;
-    }
-    @media #{$mobile} {
-        width: 200px;
-    }
-}
-#input-weight {
-    width: 475px;
-    @media #{$tablet} {
-        width: 540px;
-    }
-    @media #{$mobile} {
-        width: 175px;
-    }
-}
-#input-age {
-    width: 435px;
-    @media #{$tablet} {
-        width: 498px;
-    }
-    @media #{$mobile} {
-        width: 140px;
-    }
-}
+// #input-name {
+//     width: 505px;
+//     @media #{$tablet} {
+//         width: 570px;
+//     }
+//     @media #{$mobile} {
+//         width: 200px;
+//     }
+// }
+// #input-weight {
+//     width: 475px;
+//     @media #{$tablet} {
+//         width: 540px;
+//     }
+//     @media #{$mobile} {
+//         width: 175px;
+//     }
+// }
+// #input-age {
+//     width: 435px;
+//     @media #{$tablet} {
+//         width: 498px;
+//     }
+//     @media #{$mobile} {
+//         width: 140px;
+//     }
+// }
 .questionnaire__goals {
-    margin-top: 50px;
-    padding-left: 40px;
+    margin-top: 40px;
+    margin-left: 40px;
     border: 1px solid $block-bg;
     @media #{$tablet} {
         margin-top: 85px;
@@ -106,7 +125,7 @@
         border: none;
     }
     p {
-        margin: 30px 0;
+        margin: 15px 0;
         padding-left: 16px;
         @media #{$tablet} {
             padding-left: 0px;

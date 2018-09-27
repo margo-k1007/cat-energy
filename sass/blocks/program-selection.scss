@@ -5,7 +5,7 @@
     }
 }
 .program-selection__title {
-    margin-top: 45px;
+    margin-top: 22px;
     padding: 0 40px;
     font-family: Oswald;
     font-size: 60px;
@@ -34,7 +34,7 @@
         }
     }
     input {
-        opacity: none;
+        opacity: 1;
         &:active {
             border-color:  #ffffff;
         }

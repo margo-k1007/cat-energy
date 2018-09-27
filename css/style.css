@@ -119,7 +119,7 @@ a:active {
     .main-header__logo {
       position: relative;
       width: 100%;
-      margin-top: 0;
+      margin: 0;
       border-bottom: 1px solid #cbcbcb; } }
   .main-header__logo .main-header__link {
     display: inline-block; }
@@ -211,7 +211,8 @@ a:active {
     .main-header__menu {
       display: none;
       float: none;
-      width: 100%; } }
+      width: 100%;
+      margin: 0; } }
 
 .main-menu__item {
   width: 29%;
@@ -1636,7 +1637,7 @@ a:active {
       margin-bottom: 70px; } }
 
 .program-selection__title {
-  margin-top: 45px;
+  margin-top: 22px;
   padding: 0 40px;
   font-family: Oswald;
   font-size: 60px;
@@ -1664,7 +1665,7 @@ a:active {
       font-size: 16px; } }
 
 .program-selection__form input {
-  opacity: none; }
+  opacity: 1; }
   .program-selection__form input:active {
     border-color: #ffffff; }
 
@@ -1719,7 +1720,7 @@ fieldset {
 
 .questionnaire {
   min-height: 340px;
-  margin-bottom: 20px;
+  margin-bottom: 34px;
   padding: 0 40px;
   border: none; }
   @media (max-width: 768px) {
@@ -1743,35 +1744,44 @@ fieldset {
       font-size: 14px;
       line-height: 18px; } }
 
+.questionnaire__fields {
+  display: flex; }
+  @media (max-width: 768px) {
+    .questionnaire__fields {
+      flex-direction: column; } }
+
 .questionnaire__main-information,
 .questionnaire__goals {
-  float: left;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   width: 50%; }
   @media (max-width: 768px) {
     .questionnaire__main-information,
     .questionnaire__goals {
-      float: none;
       width: 100%; } }
 
 .questionnaire__main-information {
-  padding-top: 30px; }
+  margin-top: 30px;
+  margin-right: 40px; }
   @media (max-width: 320px) {
     .questionnaire__main-information {
       padding-top: 10px; } }
   .questionnaire__main-information p {
-    margin: 0; }
+    margin-top: 8px;
+    margin-bottom: 8px; }
+    @media (max-width: 320px) {
+      .questionnaire__main-information p {
+        margin: 0; } }
+  .questionnaire__main-information label {
+    display: flex;
+    align-items: center; }
   .questionnaire__main-information input {
+    flex: auto;
     height: 55px;
     margin-left: 15px;
     border-color: #f2f2f2;
     padding: 0 20px; }
-    .questionnaire__main-information input::-webkit-input-placeholder, .questionnaire__main-information input::-moz-placeholder, .questionnaire__main-information input:-moz-placeholder, .questionnaire__main-information input:-ms-input-placeholder {
-      color: #444;
-      font-family: Oswald;
-      font-size: 20px;
-      font-weight: 400;
-      line-height: 20px;
-      text-transform: uppercase; }
     @media (max-width: 768px) {
       .questionnaire__main-information input {
         height: 52px; } }
@@ -1779,37 +1789,17 @@ fieldset {
       .questionnaire__main-information input {
         height: 45px;
         margin: 10px 0; } }
-
-#input-name {
-  width: 505px; }
-  @media (max-width: 768px) {
-    #input-name {
-      width: 570px; } }
-  @media (max-width: 320px) {
-    #input-name {
-      width: 200px; } }
-
-#input-weight {
-  width: 475px; }
-  @media (max-width: 768px) {
-    #input-weight {
-      width: 540px; } }
-  @media (max-width: 320px) {
-    #input-weight {
-      width: 175px; } }
-
-#input-age {
-  width: 435px; }
-  @media (max-width: 768px) {
-    #input-age {
-      width: 498px; } }
-  @media (max-width: 320px) {
-    #input-age {
-      width: 140px; } }
+    .questionnaire__main-information input::-webkit-input-placeholder, .questionnaire__main-information input::-moz-placeholder, .questionnaire__main-information input:-moz-placeholder, .questionnaire__main-information input:-ms-input-placeholder {
+      color: #444;
+      font-family: Oswald;
+      font-size: 20px;
+      font-weight: 400;
+      line-height: 20px;
+      text-transform: uppercase; }
 
 .questionnaire__goals {
-  margin-top: 50px;
-  padding-left: 40px;
+  margin-top: 40px;
+  margin-left: 40px;
   border: 1px solid #f2f2f2; }
   @media (max-width: 768px) {
     .questionnaire__goals {
@@ -1820,7 +1810,7 @@ fieldset {
       margin-top: 0;
       border: none; } }
   .questionnaire__goals p {
-    margin: 30px 0;
+    margin: 15px 0;
     padding-left: 16px; }
     @media (max-width: 768px) {
       .questionnaire__goals p {
@@ -1871,7 +1861,7 @@ fieldset {
           left: 8px; } }
 
 .contacts-form {
-  margin-bottom: 25px; }
+  margin-bottom: 20px; }
   .contacts-form legend {
     margin-bottom: 40px; }
     @media (max-width: 320px) {
@@ -1884,14 +1874,21 @@ fieldset {
     .contacts-form {
       padding: 0; } }
 
+.contacts-form__fields {
+  display: flex; }
+  @media (max-width: 768px) {
+    .contacts-form__fields {
+      flex-direction: column; } }
+
 .contacts-form__email,
 .contacts-form__tel {
-  float: left;
-  width: 50%; }
+  display: flex;
+  align-items: center;
+  width: 50%;
+  padding-left: 40px; }
   @media (max-width: 768px) {
     .contacts-form__email,
     .contacts-form__tel {
-      float: none;
       width: 100%;
       margin-bottom: 20px;
       padding-left: 30px; } }
@@ -1901,6 +1898,7 @@ fieldset {
       padding-left: 0; } }
 
 .contacts-form input {
+  flex: auto;
   width: 485px;
   height: 55px;
   margin-left: 10px;
@@ -1919,7 +1917,7 @@ fieldset {
   .contacts-form label::after {
     content: "";
     position: absolute;
-    top: 4px;
+    top: 12px;
     right: 20px;
     width: 24px;
     height: 24px;
@@ -1953,6 +1951,9 @@ fieldset {
 .contacts-form__tel label:active::after, .contacts-form__tel label:focus::after {
   background: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'%3e%3cpath d='M0 0h24v24H0z' fill='none'/%3e%3cpath d='M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z' fill='green'/%3e%3c/svg%3e") 50% 50% no-repeat; }
 
+.comments-form {
+  margin-bottom: 8px; }
+
 #comments-textarea {
   width: 100%;
   text-transform: uppercase; }
@@ -1970,15 +1971,13 @@ fieldset {
       padding: 0; } }
 
 .additionally-form {
-  font-size: 0;
-  margin-bottom: 50px; }
+  margin-bottom: 36px; }
   @media (max-width: 768px) {
     .additionally-form {
       margin-bottom: 30px; } }
   .additionally-form legend {
-    margin-bottom: 25px; }
+    margin-bottom: 15px; }
   .additionally-form p {
-    display: inline-block;
     width: 25%;
     padding-left: 20px; }
     @media (max-width: 768px) {
@@ -1989,6 +1988,11 @@ fieldset {
       .additionally-form p {
         display: block;
         width: 100%; } }
+  .additionally-form .additionally-form__fields {
+    display: flex; }
+    @media (max-width: 768px) {
+      .additionally-form .additionally-form__fields {
+        flex-direction: column; } }
   .additionally-form label {
     position: relative;
     padding-left: 60px; }

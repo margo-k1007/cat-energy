@@ -1,5 +1,5 @@
 .contacts-form  {
-    margin-bottom: 25px; 
+    margin-bottom: 20px; 
     legend {
         margin-bottom: 40px;
         @media #{$mobile} {
@@ -13,12 +13,21 @@
         padding: 0;    
     }
 }
+.contacts-form__fields {
+    display: flex;
+    @media #{$tablet} {
+        flex-direction: column;
+    }
+}
 .contacts-form__email,
 .contacts-form__tel {
-    float: left;
+    // float: left;
+    display: flex;
+    align-items: center;
     width: 50%;
+    padding-left: 40px;
     @media #{$tablet} {
-        float: none;
+        // float: none;
         width: 100%;
         margin-bottom: 20px;
         padding-left: 30px;
@@ -29,25 +38,26 @@
 }
 .contacts-form {
     input {
-    width: 485px;
-    height: 55px;
-    margin-left: 10px;
-    border-color: $block-bg;
-    padding: 0 10px;
-    padding-right: 50px;
-    @media #{$tablet} {
-        height: 52px;
-    }
-    @media #{$mobile} {
-        height: 45px;
-    }
+        flex: auto;
+        width: 485px;
+        height: 55px;
+        margin-left: 10px;
+        border-color: $block-bg;
+        padding: 0 10px;
+        padding-right: 50px;
+        @media #{$tablet} {
+            height: 52px;
+        }
+        @media #{$mobile} {
+            height: 45px;
+        }
     }
     label {
         position: relative;
         &::after {
             content: "";
             position: absolute;
-            top: 4px;
+            top: 12px;
             right: 20px;
             @include size(24px);
             background: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'%3e%3cpath d='M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z'/%3e%3cpath d='M0 0h24v24H0z' fill='none'/%3e%3c/svg%3e") 50% 50% no-repeat;
