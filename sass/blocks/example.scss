@@ -10,6 +10,7 @@
     padding-left: 70px;
     padding-right: 70px;
     @media #{$tablet} {
+        margin-bottom: -30px;
         margin-left:  -30px;
         margin-right: -30px;
         padding-left: 30px;
@@ -20,6 +21,7 @@
     @media #{$mobile} {
         margin-left:  -20px;
         margin-right: -20px;
+        margin-bottom: -95px;
         padding-left: 20px;
         padding-right: 20px;
         background: $block-bg;
@@ -45,6 +47,7 @@
         padding: 0 70px;
         font-size: 36px;
         line-height: 60px;
+        background: $block-bg;
     }
 }
 .example__content {
@@ -63,7 +66,7 @@
     }
 }
 .example__text {
-    margin-top: 75px;
+    margin-top: 60px;
     margin-bottom: 75px;
     padding-right: 135px;
     font-size: 16px;
@@ -149,72 +152,102 @@
     text-transform: uppercase;
     @media #{$tablet} {
         position: static;
+        float: right;
+        width: 190px;
+        text-align: right;
     }
     @media #{$mobile} {
+        float: none;
+        width: 100%;
         font-size: 14px;
         line-height: 20px;
         text-align: center;
-        padding-top: 80px;
+        padding-top: 90px;
     }
 }
-.example__cost {
-    @media #{$tablet} {
-        float: right;
-        width: 175px;
-    }
-    @media #{$mobile} {
-        float: none;
-    }
-}
+// .example__cost {
+//     @media #{$tablet} {
+//         float: right;
+//         width: 175px;
+//     }
+//     @media #{$mobile} {
+//         float: none;
+//     }
+// }
 .example__amount {
     text-align: right;
-    @media #{$tablet} {
-        float: right;
-        width: 175px;
-    }
-    @media #{$mobile} {
-        float: none;
-    }
+    // @media #{$tablet} {
+    //     float: right;
+    //     width: 175px;
+    // }
+    // @media #{$mobile} {
+    //     float: none;
+    // }
 }
 .example__content--right {
     position: relative;
     @media #{$tablet} {
-        min-height: 500px;
+        // min-height: 500px;
         background: $block-bg;
-        padding: 70px 65px;
+        // padding: 70px 65px;
     }
 }
 .example__image {
     position: absolute;
     @include size(610px, 500px);
-    bottom: 50px;
+    bottom: 60px;
     left: 0;
     overflow: hidden;
-    background-color: $block-bg;
+    // background-color: $block-bg;
     @media #{$tablet} {
-        bottom: 100px;
+        bottom: 145px;
         @include size(610px, 500px);
     }
     @media #{$mobile} {
+        bottom: 155px;
         @include size(280px, 260px);
+    }
+    &--left {
+        left: -40px;
+        width: 364px;
+        z-index: 3;
+        @media #{$tablet} {
+            left: 15px;
+            width: 337px;
+        }
+        @media #{$mobile} {
+            left: -20px;
+            width: 337px;
+        }
+    }
+    &--right {
+        left: 50px;
+        bottom: 80px;
+        z-index: 2;
+        @media #{$tablet} {
+            left: 105px;
+            bottom: 163px;
+        }
+        @media #{$mobile} {
+            left: 50px;
+        }
     }
     img {
         object-fit: contain;
     }
 }
-.example__image--left {
-    // width: 370px;
-    z-index: 3;
-}
-.example__image--right {
-    z-index: 2;
-}
 .example__toggle {
     position: absolute;
-    bottom: -15px;
+    bottom: -27px;
     @include size(570px, 50px);
     @media #{$tablet} {
-        bottom: 20px;
+        bottom: 80px;
+    }
+    @media #{$mobile} {
+        bottom: 107px;
+        left: 50%;
+        width: 200px;
+        margin-left: -100px;
     }
 }
 .toggle__scale {
@@ -226,7 +259,7 @@
     border-radius: 3px;
     @media #{$mobile} {
         position: relative;
-        @include size(90px, 16px);
+        @include size(90px, 12px);
         padding: 3px;
         background-color: #ffffff;
     }
@@ -243,10 +276,10 @@
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
     @media #{$mobile} {
         border: none;
-        @include size(50px, 8px);
+        @include size(50px, 6px);
         border-radius: 10px;
-        top: 4px;
-        left: 0;
+        top: 3px;
+        left: 2px;
 
     }
 }
@@ -264,4 +297,3 @@
         border-bottom: none;
     }
 }
-

@@ -1,14 +1,15 @@
 .advantages {
-    @include clearfix();
+    // @include clearfix();
     // @include container();
     min-height: 105px;
     margin-bottom: 35px;
     @media #{$tablet} {
-        margin-bottom: 100px;
+        margin-bottom: 40px;
     }
 }
 .advantages__title {
     padding: 0 40px;
+    margin-top: 65px;
     margin-bottom: 68px;
     font-size: 60px;
     line-height: 1.2;
@@ -18,26 +19,43 @@
     @media #{$tablet} {
         padding: 0;
         margin-top: 12px;
+        margin-bottom: 62px;
     }
-    @media #{$tablet} {
+    @media #{$mobile} {
+        margin-bottom: 25px;
         font-size: 36px;
         line-height: 60px;
     }
-
+}
+.advantages__inner {
+    display: flex;
+    @media #{$tablet} {
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-content: space-between;
+        padding-right: 45px;
+    }
+    @media #{$mobile} {
+        flex-direction: column;
+        padding-right: 0;
+    }
 }
 .advantages__item {
-    float: left;
-    width: 325px;
+    // float: left;
+    // width: 325px;
+    width: 25%;
     padding: 0 40px;
     min-height: 226px;
     @media #{$tablet} {
-        width: 50%;
+        width: 40%;
         padding-left: 0;
-        padding-right: 40px;
+        // padding-right: 40px;
+        padding: 0;
         margin-bottom: 90px;
         &:nth-child(2n+1) {
             padding-right: 0;
             padding-left: 40px;
+            padding: 0;
             @media #{$mobile} {
                 padding-left: 0;
             }
@@ -47,13 +65,17 @@
         }
     }
     @media #{$mobile} {
-        @include clearfix();
-        float: none;
+        // @include clearfix();
+        // float: none;
+        display: flex;
         width: 100%;
         min-height: auto;
         padding: 0;
         padding-bottom: 20px;
         margin: 0;
+        &:nth-child(2n+1) {
+            padding-bottom: 20px;
+        }
     }
 }
 .advantages__icon {
@@ -74,24 +96,30 @@
     }
 
     @media #{$mobile} {
-        float: left;
+        // float: left;
         @include size(60px);
+        flex: none;
+        margin-right: 20px;
     }
 }
 .advantages__description {
-    padding-top: 35px;
+    padding-top: 15px;
 
     font-size: 16px;
     color: #444444;
     font-family: "Arial", sans-serif;
     line-height: 1.5;
+    @media #{$tablet} {
+        padding-top: 15px;
+    }
     @media #{$mobile} {
-        float: right;
-        width: 194px;
+        // float: right;
+        // width: 194px;
+        flex: auto;
         margin: 0;
         padding: 0;
-        font-size: 14px;
-        line-height: 18px;
+        font-size: 13px;
+        line-height: 19px;
     }
 }
 

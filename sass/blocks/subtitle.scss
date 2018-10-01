@@ -1,4 +1,10 @@
 
+.index-main {
+    margin-top: -25px;
+    @media #{$tablet} {
+    margin-top: 5px;
+    }
+}
 .subtitle {
     @include clearfix();
     // @include container();

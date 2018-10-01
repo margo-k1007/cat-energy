@@ -1,28 +1,39 @@
 .catalogs {
-    @include clearfix();  
+    // @include clearfix();  
     // @include container(); 
     margin-bottom: 15px; 
+    display: flex;
+    // justify-content: space-around;
+    @media #{$tablet} {
+        flex-direction: column;
+    }
 }
 .catalog {
-    float: left;
-    width: 570px;
+    // float: left;
+    // width: 570px;
+    width: 50%;
     margin: 0 40px;
     padding: 50px;
     min-height: 373px;
-
     background-color: $block-bg;
     @media #{$tablet} {
-        float: none;
+        // float: none;
         width: 100%;
         max-width: 708px;
         margin: 0;
-        margin-bottom: 30px;
+        // margin-bottom: 30px;
         min-height: 367px;
+        margin-bottom: 30px;
     }
     @media #{$mobile} {
         margin-bottom: 20px;
         padding: 20px;
         min-height: 270px;
+    }
+    &--pro {
+        @media #{$mobile} {
+            margin-bottom: 0;
+        }
     }
 }
 .catalog__icon {
@@ -61,6 +72,10 @@
     position: relative;
     top: 20px;
     left: -20px;
+    @media #{$tablet} {
+        width: 222px;
+        height: 157px;
+    }
     @media #{$mobile} {
         @include size(76px, 56px);
         top: 0;
@@ -78,13 +93,13 @@
     font-family: "Oswald";
     text-transform: uppercase;
     font-weight: 400;
-
     @media #{$tablet} and (min-width: 321px) {
         width: 370px;
         margin-bottom: 20px;
     }
     @media #{$mobile} {
         width: 145px;
+        margin-top: 10px;
         font-family: Oswald;
         font-size: 24px;
         line-height: 37px;
@@ -99,7 +114,7 @@
     color: rgb(68,68,68);
     font-family: "Arial";
     @media #{$tablet} and (min-width: 321px) {
-        width: 375px;
+        width: 340px;
         margin-top: 0;
         margin-bottom: 60px;
         line-height: 1.5;
@@ -108,18 +123,27 @@
         width: 100%;
         border-bottom: 1px solid rgb(203,203,203);
         margin-top: 12px;
-        margin-bottom: 12px;
+        margin-bottom: 0px;
         padding-bottom: 20px;
         font-size: 14px;
         line-height: 18px;
     }
 }
 .catalog__link {
+    position: relative;
     text-transform: uppercase;
     color: $link-color;
     text-decoration: none;
     @media #{$mobile} {
     font-size: 16px;
     line-height: 16px;
+    }
+    &:after {
+        content:"→";
+        position: absolute;
+        right: -40px;
+        font-weight: 700;
+        top: -6px;
+        font-size: 26px;
     }
 }
