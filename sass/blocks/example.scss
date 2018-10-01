@@ -10,7 +10,7 @@
     padding-left: 70px;
     padding-right: 70px;
     @media #{$tablet} {
-        margin-bottom: -30px;
+        margin-bottom: 75px;
         margin-left:  -30px;
         margin-right: -30px;
         padding-left: 30px;
@@ -200,7 +200,7 @@
     overflow: hidden;
     // background-color: $block-bg;
     @media #{$tablet} {
-        bottom: 145px;
+        bottom: 40px;
         @include size(610px, 500px);
     }
     @media #{$mobile} {
@@ -226,10 +226,11 @@
         z-index: 2;
         @media #{$tablet} {
             left: 105px;
-            bottom: 163px;
+            bottom: 55px;
         }
         @media #{$mobile} {
             left: 50px;
+            bottom: 165px;
         }
     }
     img {
@@ -241,11 +242,12 @@
     bottom: -27px;
     @include size(570px, 50px);
     @media #{$tablet} {
-        bottom: 80px;
+        bottom: -20px;
+        left: 50%;
+        margin-left: -285px;
     }
     @media #{$mobile} {
         bottom: 107px;
-        left: 50%;
         width: 200px;
         margin-left: -100px;
     }

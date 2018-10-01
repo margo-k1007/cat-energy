@@ -7,6 +7,9 @@
     @media #{$tablet} {
         flex-direction: column;
     }
+    @media #{$mobile} {
+        margin-bottom: 0;
+    }
 }
 .catalog {
     // float: left;

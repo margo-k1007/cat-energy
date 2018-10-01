@@ -658,6 +658,9 @@ a:active {
   @media (max-width: 768px) {
     .catalogs {
       flex-direction: column; } }
+  @media (max-width: 320px) {
+    .catalogs {
+      margin-bottom: 0; } }
 
 .catalog {
   width: 50%;
@@ -798,6 +801,9 @@ a:active {
   margin-bottom: 35px; }
   @media (max-width: 768px) {
     .advantages {
+      margin-bottom: 100px; } }
+  @media (max-width: 320px) {
+    .advantages {
       margin-bottom: 40px; } }
 
 .advantages__title {
@@ -834,9 +840,16 @@ a:active {
       padding-right: 0; } }
 
 .advantages__item {
+  position: relative;
   width: 25%;
   padding: 0 40px;
   min-height: 226px; }
+  .advantages__item:nth-child(2)::after {
+    content: "2"; }
+  .advantages__item:nth-child(3)::after {
+    content: "3"; }
+  .advantages__item:nth-child(4)::after {
+    content: "4"; }
   @media (max-width: 768px) {
     .advantages__item {
       width: 40%;
@@ -863,6 +876,21 @@ a:active {
       margin: 0; }
       .advantages__item:nth-child(2n+1) {
         padding-bottom: 20px; } }
+  .advantages__item::after {
+    content: "1";
+    position: absolute;
+    right: 40px;
+    bottom: -40px;
+    font-size: 280px;
+    color: #f2f2f2;
+    opacity: 0.8;
+    z-index: -2; }
+    @media (max-width: 768px) {
+      .advantages__item::after {
+        right: 10px; } }
+    @media (max-width: 320px) {
+      .advantages__item::after {
+        display: none; } }
 
 .advantages__icon {
   width: 80px;
@@ -913,7 +941,7 @@ a:active {
     clear: both; }
   @media (max-width: 768px) {
     .example {
-      margin-bottom: -30px;
+      margin-bottom: 75px;
       margin-left: -30px;
       margin-right: -30px;
       padding-left: 30px;
@@ -1089,7 +1117,7 @@ a:active {
   overflow: hidden; }
   @media (max-width: 768px) {
     .example__image {
-      bottom: 145px;
+      bottom: 40px;
       width: 610px;
       height: 500px; } }
   @media (max-width: 320px) {
@@ -1116,10 +1144,11 @@ a:active {
     @media (max-width: 768px) {
       .example__image--right {
         left: 105px;
-        bottom: 163px; } }
+        bottom: 55px; } }
     @media (max-width: 320px) {
       .example__image--right {
-        left: 50px; } }
+        left: 50px;
+        bottom: 165px; } }
   .example__image img {
     object-fit: contain; }
 
@@ -1130,11 +1159,12 @@ a:active {
   height: 50px; }
   @media (max-width: 768px) {
     .example__toggle {
-      bottom: 80px; } }
+      bottom: -20px;
+      left: 50%;
+      margin-left: -285px; } }
   @media (max-width: 320px) {
     .example__toggle {
       bottom: 107px;
-      left: 50%;
       width: 200px;
       margin-left: -100px; } }
 
